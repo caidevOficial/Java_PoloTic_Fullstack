@@ -35,7 +35,7 @@ public class estructura_repetitiva {
 	/* TAREA */
 	
 	/*
-	 * 1 - Realizar un programa que muestre en pantalla los 
+	 * A - Realizar un programa que muestre en pantalla los 
 	 * numeros del 1 al 35 (uno abajo del otro)
 	 * */
 	public static void contarHasta35() {
@@ -47,8 +47,8 @@ public class estructura_repetitiva {
 	}
 	
 	/*
-	 * 2 - Realizar un prtograma que dado por teclado un limite
-	 * numerico, muestr en pantalla todos los numeros hasta ese limite
+	 * B - Realizar un prtograma que dado por teclado un limite
+	 * numerico, muestre en pantalla todos los numeros hasta ese limite
 	 * empezando por el 1.*/
 	public static void contarHastaLimite() {
 		int contador = 1;
@@ -63,7 +63,7 @@ public class estructura_repetitiva {
 	}
 	
 	/*
-	 * 3 - Realizar un ptograma que muestre por pantalla los numeros
+	 * C - Realizar un programa que muestre por pantalla los numeros
 	 * del 200 al 250 saltando de 2 en 2.*/
 	public static void contar200hasta250() {
 		int contador = 200;
@@ -74,7 +74,7 @@ public class estructura_repetitiva {
 	}
 	
 	/*
-	 * 4 - Realizar un programa que lleve a cabo la cuenta regresiva 
+	 * D - Realizar un programa que lleve a cabo la cuenta regresiva 
 	 * para el año nuevo. Empieza en 10 y termina en 1*/
 	public static void decrementoAnhoNuevo() {
 		int regresivo = 10;
@@ -99,15 +99,67 @@ public class estructura_repetitiva {
 		System.out.println("Fin del bucle.");
 	}
 	
+	/*
+	 * Un gerente de una empresa prestadora de servicios de internet necesita un
+	 * algoritmo que permita realizar el cálculo del monto a pagar de la factura
+	 * de consumo de internet de 5 clientes de una empresa. Para ello, el algoritmo
+	 * debe solicitar por teclado dos datos: Dni del cliente y tipo de servicio.
+	 * Los tipos de servicio son 3:
+	 * 1. Internet 30 megas (cuyo valor es de $750 – 10% de descuento)
+	 * 2. Internet 50 megas (Cuyo valor es de $930 – 5% de descuento)
+	 * 3. Internet 100 megas (Cuyo valor fijo es de $1200)
+	 * El algoritmo debe poder calcular el monto a pagar (dependiendo del tipo de
+	 * servicio con el que cuente el cliente) e informar por pantalla el dni del
+	 * mismo junto con el monto a pagar y el número de servicio con el que cuenta.*/
+	public static void internet() {
+		int contadorClientes = 0;
+		String dni;
+		int servicio;
+		double valorServicio = 0;
+		
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+		while(contadorClientes<5) {
+			
+			System.out.println("["+(contadorClientes+1) + "° Cliente] Ingrese Dni sin puntos: ");
+			dni = teclado.next();
+			System.out.println("Ingrese numero de velocidad de servicio: 30megas | 50megas | 100megas ");
+			servicio = teclado.nextInt();
+			
+			switch(servicio) {
+			case 30: /* 30 MEGAS */
+				valorServicio = (float)750*90/100;
+				break;
+			case 50: /* 50 MEGAS */
+				valorServicio = (float)930*95/100;
+				break;
+			case 100: /* 100 MEGAS */
+				valorServicio = 1200;
+				break;
+			default:
+				System.out.println("[ERROR] Velocidad icorrecta.");
+				break;
+			}
+						
+			contadorClientes++;
+			
+			System.out.println("El cliente DNI: "+dni);
+			System.out.println("Internet "+servicio+" Megas a $"+Math.round(valorServicio));
+			System.out.println("____________________________");
+		}
+		System.out.println("Fin de la carga.");
+	}
+	
 	public static void main(String[] args) {
 		//contador();
 		//centinela();
 		
-		//contarHasta35(); // Tarea 1
-		//contarHastaLimite(); // Tarea 2
-		//contar200hasta250(); // Tarea 3
-		//decrementoAnhoNuevo(); // Tarea 4
+		//contarHasta35(); // Ejercicio A
+		//contarHastaLimite(); // Ejercicio B
+		//contar200hasta250(); // Ejercicio C
+		//decrementoAnhoNuevo(); // Ejercicio D
 		//palabrasHastaSalir(); // Tarea 5
+		internet(); // Ejercicio E
 	}
 
 }
