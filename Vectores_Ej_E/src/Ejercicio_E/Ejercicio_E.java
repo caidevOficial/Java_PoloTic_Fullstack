@@ -28,28 +28,25 @@ import java.util.Scanner;
  */
 public class Ejercicio_E {
 
-	public static int indexLimiteMinMax(float array[],char sign) {
-        float minimo = (500);
-        float maximo = (-500);
+	public static int indexLimiteMinMax(double array[],char sign) {
+		double minimo = (500);
+		double maximo = (-500);
         int index = 0;
-        Boolean primerElemento = true;
 
         switch(sign) {
         case '>': // Numero Menor
             for(int i = 0;i<array.length;i++) {
-                if(primerElemento || maximo<array[i]) {
+                if(i==0 || maximo<array[i]) {
                     maximo = array[i];
                     index = i;
-                    primerElemento = false;
                 }
             }
             break;
         case '<': // Numero Mayor
             for(int i = 0;i<array.length;i++) {
-                if(primerElemento || minimo>array[i]) {
+                if(i==0 || minimo>array[i]) {
                     minimo = array[i];
                     index = i;
-                    primerElemento = false;
                 }
             }
             break;
@@ -74,26 +71,24 @@ public class Ejercicio_E {
         int maximo; // Almacena indice de temperatura maxima
         int sizeArray = 5;
 
-        float tempMaxima[] = new float[sizeArray];
-        float tempMinima[] = new float[sizeArray];
+        double tempMaxima[] = new double[sizeArray];
+        double tempMinima[] = new double[sizeArray];
         String ciudades[] = new String[sizeArray];
         String patron = "Ciudad: [%-10s] Min: [%-5.2f째] - Max: [%-5.2f째]\n";
         String nombreCiudad;
 
-        Scanner ciudad = new Scanner(System.in);
-        Scanner temp = new Scanner(System.in);
-        Scanner temperatura = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
 
         for(int i = 0;i<sizeArray;i++) {
 
             System.out.println("Ingrese nombre de la " + (i+1) +"째 ciudad: ");
-            ciudades[i] = ciudad.next();
+            ciudades[i] = keyboard.next();
 
             System.out.println("Ingrese temp Minima de " + ciudades[i] + ": ");
-            tempMinima[i] = temp.nextFloat();
+            tempMinima[i] = keyboard.nextFloat();
 
             System.out.println("Ingrese temp Maxima de " + ciudades[i] + ": ");
-            tempMaxima[i] = temperatura.nextFloat();
+            tempMaxima[i] = keyboard.nextFloat();
             System.out.println("_____________________________________________\n");
         }
 
