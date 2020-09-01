@@ -21,7 +21,6 @@
  */
 
 package Ejercicio_03;
-
 import java.util.Scanner;
 
 /**
@@ -71,8 +70,7 @@ public class Ejercicio_03 {
         for(int rows = 0;rows<row;rows++) {
             System.out.print("[Alumno " + (rows+1) +"] ");
             for(int columns = 0;columns<column;columns++) {
-                String answer = String.format(patron, matrix[rows][columns]);
-                
+                String answer = String.format(patron, matrix[rows][columns]);              
                 System.out.print(answer);
             }
             System.out.println("\n");
