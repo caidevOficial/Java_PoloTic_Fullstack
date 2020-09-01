@@ -34,7 +34,7 @@ public class Ejercicio_E {
         int index = 0;
 
         switch(sign) {
-        case '>': // Numero Menor
+        case '>': // Numero Maximo
             for(int i = 0;i<array.length;i++) {
                 if(i==0 || maximo<array[i]) {
                     maximo = array[i];
@@ -42,7 +42,7 @@ public class Ejercicio_E {
                 }
             }
             break;
-        case '<': // Numero Mayor
+        case '<': // Numero Menor
             for(int i = 0;i<array.length;i++) {
                 if(i==0 || minimo>array[i]) {
                     minimo = array[i];
