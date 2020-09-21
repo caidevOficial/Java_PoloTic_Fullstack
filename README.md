@@ -8,7 +8,7 @@
    <tbody>
        <tr>
            <td><a href="https://www.oracle.com/technetwork/es/java/javase/downloads/index.html/" target="_blank">
-                   <img alt="Java 8" src=" https://github.com/caidevOficial/Logos/blob/master/java.svg/" width="25px" height="25px" /></td>
+                   <img alt="Java 8" src="https://github.com/caidevOficial/Logos/blob/master/java.png" width="25px" height="25px" /></td>
            <td><a href="https://www.oracle.com/technetwork/es/java/javase/downloads/index.html/">Java</a></td>
        </tr>
    </tbody>
