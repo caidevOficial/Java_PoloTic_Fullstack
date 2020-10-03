@@ -17,12 +17,29 @@
 
 package GUI;
 
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.GroupLayout;
+import javax.swing.LayoutStyle.ComponentPlacement;
+
 /**
  *
  * @author caidev
  */
 public class Visual extends javax.swing.JFrame {
 
+	public static void MensajeError(String tituloPane, String errorMsg) {
+		//===================================================================
+		JOptionPane alerta = new JOptionPane(errorMsg);
+		alerta.setMessageType(JOptionPane.ERROR_MESSAGE);
+		//por defecto tiene un solo boton y toma el idioma del sistema.
+		JDialog dialogo = alerta.createDialog(tituloPane);
+		dialogo.setVisible(true);
+		dialogo.setAlwaysOnTop(true);
+		//===================================================================
+	}
+	
     /**
      * Creates new form Principal
      */
@@ -50,7 +67,7 @@ public class Visual extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("URW Chancery L", 1, 24)); // NOI18N
-        jLabel1.setText("Programita");
+        jLabel1.setText("#CopyTextApp");
 
         jLabel2.setText("ingrese un mensaje:");
 
@@ -71,50 +88,50 @@ public class Visual extends javax.swing.JFrame {
         });
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
-        panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
-            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(jLabel3))
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(jLabel2))
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(jLabel1))
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addGap(199, 199, 199)
-                        .addComponent(btnCopiar))
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(btnClear)))
-                .addContainerGap(67, Short.MAX_VALUE))
+        	panelPrincipalLayout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(panelPrincipalLayout.createSequentialGroup()
+        			.addGroup(panelPrincipalLayout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(panelPrincipalLayout.createSequentialGroup()
+        					.addGap(131)
+        					.addComponent(jLabel3))
+        				.addGroup(panelPrincipalLayout.createSequentialGroup()
+        					.addGap(44)
+        					.addGroup(panelPrincipalLayout.createParallelGroup(Alignment.LEADING)
+        						.addComponent(txtMostrar, GroupLayout.PREFERRED_SIZE, 361, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(txtMensaje, GroupLayout.PREFERRED_SIZE, 361, GroupLayout.PREFERRED_SIZE)))
+        				.addGroup(panelPrincipalLayout.createSequentialGroup()
+        					.addGap(156)
+        					.addComponent(jLabel2))
+        				.addGroup(panelPrincipalLayout.createSequentialGroup()
+        					.addGap(199)
+        					.addComponent(btnCopiar))
+        				.addGroup(panelPrincipalLayout.createSequentialGroup()
+        					.addGap(190)
+        					.addComponent(btnClear))
+        				.addGroup(panelPrincipalLayout.createSequentialGroup()
+        					.addGap(144)
+        					.addComponent(jLabel1)))
+        			.addContainerGap(67, Short.MAX_VALUE))
         );
         panelPrincipalLayout.setVerticalGroup(
-            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCopiar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnClear))
+        	panelPrincipalLayout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(panelPrincipalLayout.createSequentialGroup()
+        			.addComponent(jLabel1)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(jLabel2)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(txtMensaje, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(btnCopiar)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(jLabel3)
+        			.addPreferredGap(ComponentPlacement.UNRELATED)
+        			.addComponent(txtMostrar, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        			.addComponent(btnClear))
         );
+        panelPrincipal.setLayout(panelPrincipalLayout);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -135,14 +152,22 @@ public class Visual extends javax.swing.JFrame {
         pack();
     }// </editor-fold>                        
 
-    private void btnCopiarActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        String texto = txtMensaje.getText();
-        txtMostrar.setText("Copia: " + texto);
+    private void btnCopiarActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(txtMensaje.getText().equals("")) {
+			MensajeError("Error al copiar.","El primer campo esta vacío.");
+		}else {
+	        String texto = txtMensaje.getText();
+	        txtMostrar.setText("Copia: " + texto);
+		}
     }                                         
 
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        txtMostrar.setText(null);
-        txtMensaje.setText(null);
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {
+    	if(txtMensaje.getText().equals("")) {
+			MensajeError("Advertencia.","No hay datos para limpiar.");
+		}else {
+	        txtMostrar.setText(null);
+	        txtMensaje.setText(null);
+		}
     }                                        
 
     
