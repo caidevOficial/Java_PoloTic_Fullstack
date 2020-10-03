@@ -21,9 +21,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JDialog;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import Logica.Controladora;
@@ -36,6 +40,17 @@ public class Front extends JFrame {
 	private JTextField txtResultado;
 	Controladora control = new Controladora();
 
+	public static void MensajeError(String tituloPane, String errorMsg) {
+		//===================================================================
+		JOptionPane alerta = new JOptionPane(errorMsg);
+		alerta.setMessageType(JOptionPane.ERROR_MESSAGE);
+		//por defecto tiene un solo boton y toma el idioma del sistema.
+		JDialog dialogo = alerta.createDialog(tituloPane);
+		dialogo.setVisible(true);
+		dialogo.setAlwaysOnTop(true);
+		//===================================================================
+	}
+	
 	/**
 	 * Create the frame.
 	 */
@@ -48,13 +63,13 @@ public class Front extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblProgramitaBuscador = new JLabel();
-		lblProgramitaBuscador.setBounds(145, 12, 208, 31);
-		lblProgramitaBuscador.setText("Programita Buscador");
+		lblProgramitaBuscador.setBounds(148, 0, 144, 31);
+		lblProgramitaBuscador.setText("#BuscadorApp");
 		lblProgramitaBuscador.setFont(new Font("URW Chancery L", Font.BOLD, 24));
 		contentPane.add(lblProgramitaBuscador);
 		
 		JLabel lblIngreseUnNombre = new JLabel();
-		lblIngreseUnNombre.setBounds(155, 43, 178, 17);
+		lblIngreseUnNombre.setBounds(146, 43, 178, 17);
 		lblIngreseUnNombre.setText("ingrese un nombre a cargar:");
 		contentPane.add(lblIngreseUnNombre);
 		
@@ -64,9 +79,14 @@ public class Front extends JFrame {
 		
 		JButton btnAgregar = new JButton();
 		btnAgregar.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent arg0) {
-				String nombreAgregar = txtCargar.getText();
-				control.CargarArray(nombreAgregar);
+				if(txtCargar.getText().equals("")) {
+					MensajeError("Error","El campo a cargar esta vacío.");
+				}else {
+					String nombreAgregar = txtCargar.getText();
+					control.CargarArray(nombreAgregar);
+				}
 			}
 		});
 		
@@ -75,7 +95,7 @@ public class Front extends JFrame {
 		contentPane.add(btnAgregar);
 		
 		JLabel lblNombreABuscar = new JLabel();
-		lblNombreABuscar.setBounds(164, 161, 118, 17);
+		lblNombreABuscar.setBounds(162, 161, 118, 17);
 		lblNombreABuscar.setText("Nombre a buscar:");
 		contentPane.add(lblNombreABuscar);
 		
@@ -87,12 +107,16 @@ public class Front extends JFrame {
 		btnBuscar.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				String nombre = txtBuscar.getText();
-				Boolean resultado = control.BuscaryMostrarNombre(nombre);
-				if(resultado) {
-					txtResultado.setText("Encontre el texto.");
+				if(txtCargar.getText().equals("")) {
+					MensajeError("Error","El campo a buscar esta vacío.");
 				}else {
-					txtResultado.setText("No encontre el texto.");
+					String nombre = txtBuscar.getText();
+					Boolean resultado = control.BuscaryMostrarNombre(nombre);
+					if(resultado) {
+						txtResultado.setText("La palabra esta cargada.");
+					}else {
+						txtResultado.setText("La palabra NO esta cargada.");
+					}
 				}
 			}
 		});

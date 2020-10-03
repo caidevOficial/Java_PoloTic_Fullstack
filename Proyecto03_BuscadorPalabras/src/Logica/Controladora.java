@@ -19,7 +19,6 @@ package Logica;
 
 /**
  * @author caidev
- *
  */
 public class Controladora {
 	String[] nombres = new String[5];
