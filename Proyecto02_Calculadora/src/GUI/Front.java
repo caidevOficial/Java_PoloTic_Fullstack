@@ -21,8 +21,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JComboBox;
+import javax.swing.JDialog;
 import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.JButton;
@@ -31,6 +34,8 @@ import java.awt.event.ActionEvent;
 
 import Logica.Controladora;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 @SuppressWarnings("serial")
 public class Front extends JFrame {
@@ -40,6 +45,16 @@ public class Front extends JFrame {
 	private JTextField txtNum2;
 	private JTextField txtResultado;
 
+	public static void MensajeError() {
+		//===================================================================
+		JOptionPane alerta = new JOptionPane("Alguno de los campos esta vacío");
+		alerta.setMessageType(JOptionPane.ERROR_MESSAGE);
+		//por defecto tiene un solo boton y toma el idioma del sistema.
+		JDialog dialogo = alerta.createDialog("Error");
+		dialogo.setVisible(true);
+		dialogo.setAlwaysOnTop(true);
+		//===================================================================
+	}
 	/**
 	 * Create the frame.
 	 */
@@ -76,6 +91,16 @@ public class Front extends JFrame {
 		panel.add(comboBoxSign);
 		
 		txtNum1 = new JTextField();
+		txtNum1.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				//para que no entren caracteres, solo numeros
+				char car = e.getKeyChar();
+				if(car < '0' || car > '9') {
+					e.consume();
+				}
+			}
+		});
 		txtNum1.setFont(new Font("Dialog", Font.PLAIN, 16));
 		txtNum1.setForeground(Color.RED);
 		txtNum1.setBackground(Color.DARK_GRAY);
@@ -84,6 +109,16 @@ public class Front extends JFrame {
 		txtNum1.setColumns(10);
 		
 		txtNum2 = new JTextField();
+		txtNum2.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				//para que no entren caracteres, solo numeros
+				char car = e.getKeyChar();
+				if(car < '0' || car > '9') {
+					e.consume();
+				}
+			}
+		});
 		txtNum2.setFont(new Font("Dialog", Font.PLAIN, 16));
 		txtNum2.setForeground(Color.RED);
 		txtNum2.setBackground(Color.DARK_GRAY);
@@ -105,12 +140,16 @@ public class Front extends JFrame {
 		btnSum.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				// parseo el string en double
-				double num1 = Double.parseDouble(txtNum1.getText());
-				double num2 = Double.parseDouble(txtNum2.getText());
-				double suma = Controladora.Suma(num1, num2);
-				// parseo a string
-				txtResultado.setText(Double.toString(suma));
+				if(txtNum1.getText().equals("") || txtNum2.getText().equals("")) {
+					MensajeError();
+				}else {
+					// parseo el string en double
+					double num1 = Double.parseDouble(txtNum1.getText());
+					double num2 = Double.parseDouble(txtNum2.getText());
+					double suma = Controladora.Suma(num1, num2);
+					// parseo a string
+					txtResultado.setText(Double.toString(suma));					
+				}
 			}
 		});
 		
@@ -124,12 +163,16 @@ public class Front extends JFrame {
 		btnMinus.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				// parseo el string en double
-				double num1 = Double.parseDouble(txtNum1.getText());
-				double num2 = Double.parseDouble(txtNum2.getText());
-				double resta = Controladora.Resta(num1, num2);
-				// parseo a string
-				txtResultado.setText(Double.toString(resta));
+				if(txtNum1.getText().equals("") || txtNum2.getText().equals("")) {
+					MensajeError();
+				}else {
+					// parseo el string en double
+					double num1 = Double.parseDouble(txtNum1.getText());
+					double num2 = Double.parseDouble(txtNum2.getText());
+					double resta = Controladora.Resta(num1, num2);
+					// parseo a string
+					txtResultado.setText(Double.toString(resta));
+				}
 			}
 		});
 		
@@ -143,12 +186,16 @@ public class Front extends JFrame {
 		btnMul.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				// parseo el string en double
-				double num1 = Double.parseDouble(txtNum1.getText());
-				double num2 = Double.parseDouble(txtNum2.getText());
-				double mul = Controladora.Mul(num1, num2);
-				// parseo a string
-				txtResultado.setText(Double.toString(mul));
+				if(txtNum1.getText().equals("") || txtNum2.getText().equals("")) {
+					MensajeError();
+				}else {
+					// parseo el string en double
+					double num1 = Double.parseDouble(txtNum1.getText());
+					double num2 = Double.parseDouble(txtNum2.getText());
+					double mul = Controladora.Mul(num1, num2);
+					// parseo a string
+					txtResultado.setText(Double.toString(mul));
+				}
 			}
 		});
 		
@@ -162,12 +209,16 @@ public class Front extends JFrame {
 		btnDiv.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				// parseo el string en double
-				double num1 = Double.parseDouble(txtNum1.getText());
-				double num2 = Double.parseDouble(txtNum2.getText());
-				double div = Controladora.Div(num1, num2);
-				// parseo a string
-				txtResultado.setText(Double.toString(div));
+				if(txtNum1.getText().equals("") || txtNum2.getText().equals("")) {
+					MensajeError();
+				}else {
+					// parseo el string en double
+					double num1 = Double.parseDouble(txtNum1.getText());
+					double num2 = Double.parseDouble(txtNum2.getText());
+					double div = Controladora.Div(num1, num2);
+					// parseo a string
+					txtResultado.setText(Double.toString(div));
+				}
 			}
 		});
 		
