@@ -3,6 +3,13 @@
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=caidevOficial&show_icons=true&theme=tokyonight" />
 </a></br></br>
 
+```java
+private static String StartCourse(){
+    String message = "Keep Learning and coding!"
+    return message
+}
+```
+
 ## Tecnologías usadas al momento.
 <table>
    <tbody>
