@@ -24,7 +24,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
-import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -33,7 +32,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 import Logica.Controladora;
-import javax.swing.DefaultComboBoxModel;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -58,7 +56,6 @@ public class Front extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	@SuppressWarnings("rawtypes")
 	public Front() {
 		setBackground(Color.DARK_GRAY);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -80,15 +77,6 @@ public class Front extends JFrame {
 		lblCalculadorappJava.setBounds(70, 12, 201, 26);
 		lblCalculadorappJava.setFont(new Font("URW Bookman L", Font.BOLD | Font.ITALIC, 16));
 		panel.add(lblCalculadorappJava);
-		
-		JComboBox comboBoxSign = new JComboBox();
-		comboBoxSign.setModel(new DefaultComboBoxModel(new String[] {"+", "-", "*", "/"}));
-		comboBoxSign.setSelectedIndex(0);
-		comboBoxSign.setFont(new Font("Dialog", Font.BOLD, 16));
-		comboBoxSign.setForeground(Color.RED);
-		comboBoxSign.setBackground(Color.DARK_GRAY);
-		comboBoxSign.setBounds(146, 125, 56, 45);
-		panel.add(comboBoxSign);
 		
 		txtNum1 = new JTextField();
 		txtNum1.addKeyListener(new KeyAdapter() {
@@ -209,15 +197,20 @@ public class Front extends JFrame {
 		btnDiv.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
+				
 				if(txtNum1.getText().equals("") || txtNum2.getText().equals("")) {
 					MensajeError();
 				}else {
-					// parseo el string en double
-					double num1 = Double.parseDouble(txtNum1.getText());
-					double num2 = Double.parseDouble(txtNum2.getText());
-					double div = Controladora.Div(num1, num2);
-					// parseo a string
-					txtResultado.setText(Double.toString(div));
+					if(txtNum2.getText().equals('0')) {
+						txtResultado.setText("No se puede dividir por cero");
+					}else {
+						// parseo el string en double
+						double num1 = Double.parseDouble(txtNum1.getText());
+						double num2 = Double.parseDouble(txtNum2.getText());
+						double div = Controladora.Div(num1, num2);
+						// parseo a string
+						txtResultado.setText(Double.toString(div));
+					}
 				}
 			}
 		});
