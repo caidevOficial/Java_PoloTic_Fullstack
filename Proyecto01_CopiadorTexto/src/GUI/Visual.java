@@ -27,6 +27,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
  *
  * @author caidev
  */
+@SuppressWarnings("serial")
 public class Visual extends javax.swing.JFrame {
 
 	public static void MensajeError(String tituloPane, String errorMsg) {
