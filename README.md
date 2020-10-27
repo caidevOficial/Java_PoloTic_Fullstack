@@ -16,6 +16,7 @@ private static String StartCourse(){
 <!-- Python -->
 |<a href="https://www.oracle.com/technetwork/es/java/javase/downloads/index.html/"><img align="center" alt="Java 8" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/java.png" width="50px" height="50px" />|<h3>Java</h3>|
 |--------|----------|
+|<a href="https://www.w3schools.com/sql/"><img align="center" alt="Java 8" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/logo-sql.png" width="50px" height="50px" />|<h3>SQL</h3>|
     
 ## Licencia 📄
 Este proyecto está bajo la Licencia [GNU GENERAL PUBLIC LICENSE v3.0] - mira el archivo [LICENSE.md](LICENSE) para detalles
