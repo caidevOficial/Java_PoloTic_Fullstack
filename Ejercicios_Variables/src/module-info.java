@@ -1,2 +1,0 @@
-module Ejercicios_Variables {
-}
