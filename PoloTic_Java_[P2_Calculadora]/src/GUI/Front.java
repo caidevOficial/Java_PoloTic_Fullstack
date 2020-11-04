@@ -196,6 +196,7 @@ public class Front extends JFrame {
 		JButton btnDiv = new JButton("/");
 		btnDiv.addActionListener(new ActionListener() {
 			
+			@SuppressWarnings("unlikely-arg-type")
 			public void actionPerformed(ActionEvent arg0) {
 				
 				if(txtNum1.getText().equals("") || txtNum2.getText().equals("")) {
