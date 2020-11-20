@@ -25,11 +25,12 @@ import logic.entity.Persona;
  * @author CaidevOficial
  *
  */
-public class Empleado extends Persona{
-    
+public class Empleado extends Persona {
+
     // Attributes
     protected int nroLegajo;
     protected Date fechaIngreso;
+
     /**
      * 
      */
@@ -45,7 +46,7 @@ public class Empleado extends Persona{
 	super(dni);
 	// TODO Auto-generated constructor stub
     }
-    
+
     /**
      * @param dni
      * @param name
@@ -75,7 +76,7 @@ public class Empleado extends Persona{
 	super(dni, name, surname, address);
 	// TODO Auto-generated constructor stub
     }
-    
+
     /**
      * @param dni
      * @param name
@@ -98,9 +99,9 @@ public class Empleado extends Persona{
      */
     public Empleado(String dni, String name, String surname, Date birthDate, String address, int age) {
 	super(dni, name, surname, birthDate, address, age);
-	
+
     }
-    
+
     /**
      * 
      * @param dni
@@ -115,7 +116,7 @@ public class Empleado extends Persona{
 	this(dni, name, surname, birthDate, address, age);
 	this.nroLegajo = nroLegajo;
     }
-    
+
     /**
      * 
      * @param dni
@@ -136,22 +137,22 @@ public class Empleado extends Persona{
      * @return the nroLegajo
      */
     public int getNroLegajo() {
-        return nroLegajo;
+	return nroLegajo;
     }
 
     /**
      * @return the fechaIngreso
      */
     public Date getFechaIngreso() {
-        return fechaIngreso;
+	return fechaIngreso;
     }
 
     /**
      * @param nroLegajo the nroLegajo to set
      */
     public void setNroLegajo(int nroLegajo) {
-	if(nroLegajo>=0) {
-	    this.nroLegajo = nroLegajo;	    
+	if (nroLegajo >= 0) {
+	    this.nroLegajo = nroLegajo;
 	}
     }
 
@@ -159,11 +160,9 @@ public class Empleado extends Persona{
      * @param fechaIngreso the fechaIngreso to set
      */
     public void setFechaIngreso(Date fechaIngreso) {
-	if(fechaIngreso!=null) {
-	    this.fechaIngreso = fechaIngreso;	    
+	if (fechaIngreso != null) {
+	    this.fechaIngreso = fechaIngreso;
 	}
     }
-    
-    
 
 }

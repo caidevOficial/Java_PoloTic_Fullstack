@@ -23,8 +23,8 @@ import java.util.Date;
  * @author CaidevOficial
  *
  */
-public class Consultor extends Empleado{
-    
+public class Consultor extends Empleado {
+
     // Attributes
     protected String area;
 
@@ -33,7 +33,7 @@ public class Consultor extends Empleado{
      */
     public Consultor() {
 	super();
-	
+
     }
 
     /**
@@ -124,15 +124,15 @@ public class Consultor extends Empleado{
      * @return the area
      */
     public String getArea() {
-        return area;
+	return area;
     }
 
     /**
      * @param area the area to set
      */
     public void setArea(String area) {
-	if(area!=null) {
-	    this.area = area;	    
+	if (area != null) {
+	    this.area = area;
 	}
     }
 }

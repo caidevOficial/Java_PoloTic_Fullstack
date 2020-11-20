@@ -24,7 +24,7 @@ import java.util.Date;
  *
  */
 public class Persona {
-    
+
     // Atributes
     protected String dni;
     protected String name;
@@ -32,7 +32,7 @@ public class Persona {
     protected String address;
     protected Date birthDate;
     protected int age;
-    
+
     /**
      * 
      */
@@ -52,7 +52,7 @@ public class Persona {
     public Persona(String dni) {
 	this();
     }
-    
+
     /**
      * Builds the entity with 2 params.
      * @param dni the dni number of the entity.
@@ -62,7 +62,7 @@ public class Persona {
 	this(dni);
 	this.name = name;
     }
-    
+
     /**
      * Builds the entity with 3 params.
      * @param dni the dni number of the entity.
@@ -73,7 +73,7 @@ public class Persona {
 	this(dni, name);
 	this.surname = surname;
     }
-    
+
     /**
      * Builds the entity with 4 params.
      * @param dni the dni number of the entity.
@@ -98,7 +98,7 @@ public class Persona {
 	this(dni, name, surname, address);
 	this.birthDate = birthDate;
     }
-    
+
     /**
      * Builds the entity with 6 params
      * @param dni the dni number of the entity.
@@ -117,50 +117,50 @@ public class Persona {
      * @return the dni
      */
     public String getDni() {
-        return dni;
+	return dni;
     }
 
     /**
      * @return the name
      */
     public String getName() {
-        return name;
+	return name;
     }
 
     /**
      * @return the surname
      */
     public String getSurname() {
-        return surname;
+	return surname;
     }
 
     /**
      * @return the address
      */
     public String getAddress() {
-        return address;
+	return address;
     }
 
     /**
      * @return the birthDate
      */
     public Date getBirthDate() {
-        return birthDate;
+	return birthDate;
     }
 
     /**
      * @return the age
      */
     public int getAge() {
-        return age;
+	return age;
     }
 
     /**
      * @param dni the dni to set
      */
     public void setDni(String dni) {
-	if(dni!=null) {
-	    this.dni = dni;	    
+	if (dni != null) {
+	    this.dni = dni;
 	}
     }
 
@@ -168,8 +168,8 @@ public class Persona {
      * @param name the name to set
      */
     public void setName(String name) {
-	if(name!=null) {
-	    this.name = name;	    
+	if (name != null) {
+	    this.name = name;
 	}
     }
 
@@ -177,8 +177,8 @@ public class Persona {
      * @param surname the surname to set
      */
     public void setSurname(String surname) {
-	if(surname!=null) {
-	    this.surname = surname;	    
+	if (surname != null) {
+	    this.surname = surname;
 	}
     }
 
@@ -186,8 +186,8 @@ public class Persona {
      * @param address the address to set
      */
     public void setAddress(String address) {
-	if(address!=null) {
-	    this.address = address;	    
+	if (address != null) {
+	    this.address = address;
 	}
     }
 
@@ -195,8 +195,8 @@ public class Persona {
      * @param birthDate the birthDate to set
      */
     public void setBirthDate(Date birthDate) {
-	if(birthDate!=null) {
-	    this.birthDate = birthDate;	    
+	if (birthDate != null) {
+	    this.birthDate = birthDate;
 	}
     }
 
@@ -204,8 +204,8 @@ public class Persona {
      * @param age the age to set
      */
     public void setAge(int age) {
-	if(age>=0) {
-	    this.age = age;	    
+	if (age >= 0) {
+	    this.age = age;
 	}
     }
 }
