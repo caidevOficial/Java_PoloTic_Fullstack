@@ -25,66 +25,66 @@ import java.util.Date;
  */
 public class Pedido {
 
-	// Attributes.
-	protected int numeroPedido;
-	protected Date fechaPedido;
-	
-	/**
-	 * Builds the entity with default values.
-	 */
-	public Pedido() {
-		this.numeroPedido = 0;
-		this.fechaPedido = null;
-	}
-	
-	/**
-	 * Builds the entity with 1 param.
-	 * @param numeroPedido
-	 */
-	public Pedido(int numeroPedido) {
-		this();
-		if(numeroPedido>0) {
-			this.numeroPedido = numeroPedido;
-		}
-	}
-	
-	/**
-	 * Builds the entity with 2 params.
-	 * @param numeroPedido
-	 * @param fechaPedido
-	 */
-	public Pedido(int numeroPedido, Date fechaPedido) {
-		this(numeroPedido);
-		if(fechaPedido!=null) {
-			this.fechaPedido = fechaPedido;
-		}
-	}
+    // Attributes.
+    protected int numeroPedido;
+    protected Date fechaPedido;
 
-	/**
-	 * @return the numeroPedido
-	 */
-	public int getNumeroPedido() {
-		return numeroPedido;
-	}
+    /**
+     * Builds the entity with default values.
+     */
+    public Pedido() {
+	this.numeroPedido = 0;
+	this.fechaPedido = null;
+    }
 
-	/**
-	 * @return the fechaPedido
-	 */
-	public Date getFechaPedido() {
-		return fechaPedido;
+    /**
+     * Builds the entity with 1 param.
+     * @param numeroPedido
+     */
+    public Pedido(int numeroPedido) {
+	this();
+	if (numeroPedido > 0) {
+	    this.numeroPedido = numeroPedido;
 	}
+    }
 
-	/**
-	 * @param numeroPedido the numeroPedido to set
-	 */
-	public void setNumeroPedido(int numeroPedido) {
-		this.numeroPedido = numeroPedido;
+    /**
+     * Builds the entity with 2 params.
+     * @param numeroPedido
+     * @param fechaPedido
+     */
+    public Pedido(int numeroPedido, Date fechaPedido) {
+	this(numeroPedido);
+	if (fechaPedido != null) {
+	    this.fechaPedido = fechaPedido;
 	}
+    }
 
-	/**
-	 * @param fechaPedido the fechaPedido to set
-	 */
-	public void setFechaPedido(Date fechaPedido) {
-		this.fechaPedido = fechaPedido;
-	}
+    /**
+     * @return the numeroPedido
+     */
+    public int getNumeroPedido() {
+	return numeroPedido;
+    }
+
+    /**
+     * @return the fechaPedido
+     */
+    public Date getFechaPedido() {
+	return fechaPedido;
+    }
+
+    /**
+     * @param numeroPedido the numeroPedido to set
+     */
+    public void setNumeroPedido(int numeroPedido) {
+	this.numeroPedido = numeroPedido;
+    }
+
+    /**
+     * @param fechaPedido the fechaPedido to set
+     */
+    public void setFechaPedido(Date fechaPedido) {
+	this.fechaPedido = fechaPedido;
+    }
 }
