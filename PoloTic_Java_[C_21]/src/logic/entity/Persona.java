@@ -34,7 +34,7 @@ public class Persona {
     protected int age;
 
     /**
-     * 
+     * Builds the entity with default params.
      */
     public Persona() {
 	this.dni = "11111111";

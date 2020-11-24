@@ -29,11 +29,10 @@ public class Consultor extends Empleado {
     protected String area;
 
     /**
-     * 
+     * Builds the entity with default params.
      */
     public Consultor() {
 	super();
-
     }
 
     /**

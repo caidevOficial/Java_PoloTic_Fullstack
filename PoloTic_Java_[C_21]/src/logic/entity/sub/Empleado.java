@@ -32,11 +32,10 @@ public class Empleado extends Persona {
     protected Date fechaIngreso;
 
     /**
-     * 
+     * Builds the entity with default params.
      */
     public Empleado() {
 	super();
-	// TODO Auto-generated constructor stub
     }
 
     /**
@@ -44,7 +43,6 @@ public class Empleado extends Persona {
      */
     public Empleado(String dni) {
 	super(dni);
-	// TODO Auto-generated constructor stub
     }
 
     /**
@@ -53,7 +51,6 @@ public class Empleado extends Persona {
      */
     public Empleado(String dni, String name) {
 	super(dni, name);
-	// TODO Auto-generated constructor stub
     }
 
     /**
@@ -63,7 +60,6 @@ public class Empleado extends Persona {
      */
     public Empleado(String dni, String name, String surname) {
 	super(dni, name, surname);
-	// TODO Auto-generated constructor stub
     }
 
     /**
@@ -74,7 +70,6 @@ public class Empleado extends Persona {
      */
     public Empleado(String dni, String name, String surname, String address) {
 	super(dni, name, surname, address);
-	// TODO Auto-generated constructor stub
     }
 
     /**
@@ -86,7 +81,6 @@ public class Empleado extends Persona {
      */
     public Empleado(String dni, String name, String surname, String address, Date birthDate) {
 	super(dni, name, surname, address, birthDate);
-	// TODO Auto-generated constructor stub
     }
 
     /**
@@ -99,7 +93,6 @@ public class Empleado extends Persona {
      */
     public Empleado(String dni, String name, String surname, Date birthDate, String address, int age) {
 	super(dni, name, surname, birthDate, address, age);
-
     }
 
     /**
@@ -164,5 +157,4 @@ public class Empleado extends Persona {
 	    this.fechaIngreso = fechaIngreso;
 	}
     }
-
 }
