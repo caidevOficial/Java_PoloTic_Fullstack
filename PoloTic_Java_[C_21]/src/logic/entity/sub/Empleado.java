@@ -19,7 +19,7 @@ package logic.entity.sub;
 
 import java.util.Date;
 
-import logic.entity.Persona;
+import logic.Abs.entity.Persona;
 
 /**
  * @author CaidevOficial
@@ -42,7 +42,7 @@ public class Empleado extends Persona {
      * @param dni
      */
     public Empleado(String dni) {
-	super(dni);
+	super.dni = dni;
     }
 
     /**
@@ -50,7 +50,8 @@ public class Empleado extends Persona {
      * @param name
      */
     public Empleado(String dni, String name) {
-	super(dni, name);
+	this(dni);
+	this.name = name;
     }
 
     /**
@@ -59,28 +60,8 @@ public class Empleado extends Persona {
      * @param surname
      */
     public Empleado(String dni, String name, String surname) {
-	super(dni, name, surname);
-    }
-
-    /**
-     * @param dni
-     * @param name
-     * @param surname
-     * @param address
-     */
-    public Empleado(String dni, String name, String surname, String address) {
-	super(dni, name, surname, address);
-    }
-
-    /**
-     * @param dni
-     * @param name
-     * @param surname
-     * @param address
-     * @param birthDate
-     */
-    public Empleado(String dni, String name, String surname, String address, Date birthDate) {
-	super(dni, name, surname, address, birthDate);
+	this(dni,name);
+	this.surname = surname;
     }
 
     /**
@@ -92,7 +73,8 @@ public class Empleado extends Persona {
      * @param age
      */
     public Empleado(String dni, String name, String surname, Date birthDate, String address, int age) {
-	super(dni, name, surname, birthDate, address, age);
+	this(dni, name, surname, address, birthDate);
+	this.age = age;
     }
 
     /**
@@ -127,12 +109,33 @@ public class Empleado extends Persona {
     }
 
     /**
-     * @return the nroLegajo
+     * @param dni
+     * @param name
+     * @param surname
+     * @param address
      */
-    public int getNroLegajo() {
-	return nroLegajo;
+    public Empleado(String dni, String name, String surname, String address) {
+	this(dni, name, surname);
+	this.address = address;
     }
 
+    /**
+     * @param dni
+     * @param name
+     * @param surname
+     * @param address
+     * @param birthDate
+     */
+    public Empleado(String dni, String name, String surname, String address, Date birthDate) {
+	this(dni, name, surname, address);
+	this.birthDate = birthDate;
+    }
+
+    
+    public String getDNI() {
+	return dni;
+    }
+    
     /**
      * @return the fechaIngreso
      */
@@ -141,12 +144,10 @@ public class Empleado extends Persona {
     }
 
     /**
-     * @param nroLegajo the nroLegajo to set
+     * @return the nroLegajo
      */
-    public void setNroLegajo(int nroLegajo) {
-	if (nroLegajo >= 0) {
-	    this.nroLegajo = nroLegajo;
-	}
+    public int getNroLegajo() {
+	return nroLegajo;
     }
 
     /**
@@ -155,6 +156,15 @@ public class Empleado extends Persona {
     public void setFechaIngreso(Date fechaIngreso) {
 	if (fechaIngreso != null) {
 	    this.fechaIngreso = fechaIngreso;
+	}
+    }
+
+    /**
+     * @param nroLegajo the nroLegajo to set
+     */
+    public void setNroLegajo(int nroLegajo) {
+	if (nroLegajo >= 0) {
+	    this.nroLegajo = nroLegajo;
 	}
     }
 }
