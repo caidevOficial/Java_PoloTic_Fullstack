@@ -18,12 +18,12 @@
 package logic.base.SubClass;
 
 import logic.base.Vehicle;
-import logic.base.Interface.Common;
+import logic.base.Interface.ICommon;
 
 /**
  * @author FacuFalcone - CaidevOficial
  */
-public class Motorcycle extends Vehicle implements Common{
+public class Motorcycle extends Vehicle implements ICommon{
 
     // Atributes
     protected String handleMaterial;

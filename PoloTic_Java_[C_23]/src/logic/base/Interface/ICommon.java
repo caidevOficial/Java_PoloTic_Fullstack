@@ -20,7 +20,7 @@ package logic.base.Interface;
 /**
  * @author FacuFalcone - CaidevOficial
  */
-public interface Common {
+public interface ICommon {
 
     // Methods
     public void Greetings();

@@ -18,12 +18,12 @@
 package logic.base.SubClass;
 
 import logic.base.Vehicle;
-import logic.base.Interface.Common;
+import logic.base.Interface.ICommon;
 
 /**
  * @author FacuFalcone - CaidevOficial
  */
-public class Truck extends Vehicle implements Common{
+public class Truck extends Vehicle implements ICommon{
 
     // Atributes
     boolean hasCoupled;

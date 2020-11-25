@@ -23,7 +23,7 @@ import logic.base.Interface.*;
 /**
  * @author FacuFalcone - CaidevOficial
  */
-public class Car extends Vehicle implements Common{
+public class Car extends Vehicle implements ICommon{
 
     // Atributes
     protected String seatingsMaterial;

@@ -7,7 +7,7 @@ package logic.base.Abstract;
  * @author FacuFalcone - CaidevOficial
  *
  */
-public abstract class IVehicle {
+public abstract class Abstract_Vehicle {
 
     // Atributes
  	protected String color;

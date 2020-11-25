@@ -18,12 +18,12 @@
 package logic.base.SubClass;
 
 import logic.base.Vehicle;
-import logic.base.Interface.Common;
+import logic.base.Interface.ICommon;
 
 /**
  * @author FacuFalcone - CaidevOficial
  */
-public class Bus extends Vehicle implements Common{
+public class Bus extends Vehicle implements ICommon{
  
     // Atributes
     boolean suitableDisabled;

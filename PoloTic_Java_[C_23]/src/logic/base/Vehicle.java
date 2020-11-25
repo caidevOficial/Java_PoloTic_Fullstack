@@ -17,13 +17,13 @@
 
 package logic.base;
 
-import logic.base.Abstract.IVehicle;
-import logic.base.Interface.Common;
+import logic.base.Abstract.Abstract_Vehicle;
+import logic.base.Interface.ICommon;
 
 /**
  * @author FacuFalcone - CaidevOficial
  */
-public class Vehicle extends IVehicle implements Common{
+public class Vehicle extends Abstract_Vehicle implements ICommon{
 
 	/**
 	 * Builds the entity with default params.
