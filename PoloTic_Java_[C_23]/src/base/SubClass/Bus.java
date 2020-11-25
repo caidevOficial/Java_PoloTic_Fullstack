@@ -22,13 +22,12 @@ import base.Interface.Common;
 
 /**
  * @author FacuFalcone - CaidevOficial
- *
  */
 public class Bus extends Vehicle implements Common{
  
-
+    // Atributes
     boolean suitableDisabled;
-    boolean haveCardLector;
+    boolean hasCardLector;
     String busType;
     
     /**
@@ -38,7 +37,7 @@ public class Bus extends Vehicle implements Common{
 	   super();
 	   this.busType = "";
 	   this.suitableDisabled = false;
-	   this.haveCardLector = false;
+	   this.hasCardLector = false;
     }
 
     /**
@@ -162,16 +161,15 @@ public class Bus extends Vehicle implements Common{
      * @param seatingQuantty Quantity of seating of the entity.
      * @param busType Type of bus of the entity.
      * @param suitableDisabled boolean to dennote if it's suitable for disabled people.
-     * @param haveCardLector Boolean to dennote if the entity has card Lector or not.
+     * @param hasCardLector Boolean to dennote if the entity has card Lector or not.
      */
-    public Bus(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String busType, boolean suitableDisabled, boolean haveCardLector) {
+    public Bus(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String busType, boolean suitableDisabled, boolean hasCardLector) {
 	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty, busType, suitableDisabled);
-	   this.haveCardLector = haveCardLector;
+	   this.hasCardLector = hasCardLector;
     }
 
     @Override
     public String getBrand() {
-	   // TODO Auto-generated method stub
 	   return super.getBrand();
     }
 
@@ -184,52 +182,45 @@ public class Bus extends Vehicle implements Common{
 
     @Override
     public String getChassisNumber() {
-	   // TODO Auto-generated method stub
 	   return super.getChassisNumber();
     }
 
     @Override
     public String getColor() {
-	   // TODO Auto-generated method stub
 	   return super.getColor();
     }
 
     
     @Override
     public int getSeatingQuantty() {
-	   // TODO Auto-generated method stub
 	   return super.getSeatingQuantty();
     }
 
     @Override
     public void setSeatingQuantty(int seatingQuantty) {
-	   // TODO Auto-generated method stub
 	   super.setSeatingQuantty(seatingQuantty);
     }
 
     @Override
     public String getModel() {
-	   // TODO Auto-generated method stub
 	   return super.getModel();
     }
 
     @Override
     public String getMotor() {
-	   // TODO Auto-generated method stub
 	   return super.getMotor();
     }
 
     @Override
     public String getPatent() {
-	   // TODO Auto-generated method stub
 	   return super.getPatent();
     }
 
     /**
-     * @return the haveCardLector
+     * @return the hasCardLector
      */
-    public boolean isHaveCardLector() {
-        return haveCardLector;
+    public boolean ishasCardLector() {
+        return hasCardLector;
     }
 
     /**
@@ -241,7 +232,6 @@ public class Bus extends Vehicle implements Common{
 
     @Override
     public void setBrand(String brand) {
-	   // TODO Auto-generated method stub
 	   super.setBrand(brand);
     }
 
@@ -254,39 +244,34 @@ public class Bus extends Vehicle implements Common{
 
     @Override
     public void setChassisNumber(String chassisNumber) {
-	   // TODO Auto-generated method stub
 	   super.setChassisNumber(chassisNumber);
     }
 
     @Override
     public void setColor(String color) {
-	   // TODO Auto-generated method stub
 	   super.setColor(color);
     }
 
     
     /**
-     * @param haveCardLector the haveCardLector to set
+     * @param hasCardLector the hasCardLector to set
      */
-    public void setHaveCardLector(boolean haveCardLector) {
-        this.haveCardLector = haveCardLector;
+    public void setHasCardLector(boolean hasCardLector) {
+        this.hasCardLector = hasCardLector;
     }
 
     @Override
     public void setModel(String model) {
-	   // TODO Auto-generated method stub
 	   super.setModel(model);
     }
 
     @Override
     public void setMotor(String motor) {
-	   // TODO Auto-generated method stub
 	   super.setMotor(motor);
     }
 
     @Override
     public void setPatent(String patent) {
-	   // TODO Auto-generated method stub
 	   super.setPatent(patent);
     }
 
@@ -302,5 +287,4 @@ public class Bus extends Vehicle implements Common{
 	   int seatingQuantity = getSeatingQuantty();
 	   System.out.println("Hi, i`m a Bus and my seatings are: " + seatingQuantity);
     }
-
 }

@@ -25,7 +25,6 @@ import base.SubClass.Truck;
 
 /**
  * @author FacuFalcone - CaidevOficial
- *
  */
 public class Main {
 

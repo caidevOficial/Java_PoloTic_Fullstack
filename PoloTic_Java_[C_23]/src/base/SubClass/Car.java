@@ -22,10 +22,10 @@ import base.Interface.*;
 
 /**
  * @author FacuFalcone - CaidevOficial
- *
  */
 public class Car extends Vehicle implements Common{
 
+    // Atributes
     protected String seatingsMaterial;
     protected int horsePower;
 
@@ -34,6 +34,8 @@ public class Car extends Vehicle implements Common{
      */
     public Car() {
 	   super();
+	   this.seatingsMaterial = "";
+	   this.horsePower = 0;
     }
 
     /**

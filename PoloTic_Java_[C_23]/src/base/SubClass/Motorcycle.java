@@ -22,10 +22,10 @@ import base.Interface.Common;
 
 /**
  * @author FacuFalcone - CaidevOficial
- *
  */
 public class Motorcycle extends Vehicle implements Common{
 
+    // Atributes
     protected String handleMaterial;
     protected int displacement;
     
@@ -44,7 +44,6 @@ public class Motorcycle extends Vehicle implements Common{
      */
     public Motorcycle(String color) {
 	   super(color);
-	   // TODO Auto-generated constructor stub
     }
 
     /**
@@ -64,7 +63,6 @@ public class Motorcycle extends Vehicle implements Common{
      */
     public Motorcycle(String color, String brand) {
 	   super(color, brand);
-	   // TODO Auto-generated constructor stub
     }
 
     /**
@@ -75,7 +73,6 @@ public class Motorcycle extends Vehicle implements Common{
      */
     public Motorcycle(String color, String brand, String model) {
 	   super(color, brand, model);
-	   // TODO Auto-generated constructor stub
     }
 
     /**
@@ -87,7 +84,6 @@ public class Motorcycle extends Vehicle implements Common{
      */
     public Motorcycle(String color, String brand, String model, String patent) {
 	   super(color, brand, model, patent);
-	   // TODO Auto-generated constructor stub
     }
 
     /**
@@ -100,7 +96,6 @@ public class Motorcycle extends Vehicle implements Common{
      */
     public Motorcycle(String color, String brand, String model, String patent, int seatingQuantty) {
 	   super(color, brand, model, patent, seatingQuantty);
-	   // TODO Auto-generated constructor stub
     }
 
     /**
@@ -114,7 +109,6 @@ public class Motorcycle extends Vehicle implements Common{
      */
     public Motorcycle(String color, String brand, String model, String patent, String chassisNumber, int seatingQuantty) {
 	   super(color, brand, model, patent, chassisNumber, seatingQuantty);
-	   // TODO Auto-generated constructor stub
     }
 
     /**
@@ -255,13 +249,11 @@ public class Motorcycle extends Vehicle implements Common{
 
     @Override
     public int getSeatingQuantty() {
-	   // TODO Auto-generated method stub
 	   return super.getSeatingQuantty();
     }
 
     @Override
     public void setSeatingQuantty(int seatingQuantty) {
-	   // TODO Auto-generated method stub
 	   super.setSeatingQuantty(seatingQuantty);
     }
 

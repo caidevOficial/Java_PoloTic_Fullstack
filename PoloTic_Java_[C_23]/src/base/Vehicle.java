@@ -17,22 +17,14 @@
 
 package base;
 
+import base.Abstract.IVehicle;
 import base.Interface.Common;
 
 /**
  * @author FacuFalcone - CaidevOficial
  */
-public class Vehicle implements Common{
+public class Vehicle extends IVehicle implements Common{
 
-	// Atributes
-	protected String color;
-	protected String brand;
-	protected String model;
-	protected String patent;
-	protected String chassisNumber;
-	protected String motor;
-	protected int seatingQuantty;
-	
 	/**
 	 * Builds the entity with default params.
 	 */
@@ -244,6 +236,6 @@ public class Vehicle implements Common{
 
     @Override
     public void Greetings() {
-	   // TODO Auto-generated method stub   
+	   
     }
 }

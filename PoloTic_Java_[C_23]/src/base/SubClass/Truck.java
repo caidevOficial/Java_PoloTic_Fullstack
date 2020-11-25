@@ -22,10 +22,10 @@ import base.Interface.Common;
 
 /**
  * @author FacuFalcone - CaidevOficial
- *
  */
 public class Truck extends Vehicle implements Common{
 
+    // Atributes
     boolean hasCoupled;
     int axisQuantty;
     

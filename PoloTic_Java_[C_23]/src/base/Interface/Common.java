@@ -19,9 +19,9 @@ package base.Interface;
 
 /**
  * @author FacuFalcone - CaidevOficial
- *
  */
 public interface Common {
 
+    // Methods
     public void Greetings();
 }
