@@ -18,82 +18,78 @@
 package base.SubClass;
 
 import base.Vehicle;
-import base.Interface.*;
+import base.Interface.Common;
 
 /**
  * @author FacuFalcone - CaidevOficial
  *
  */
-public class Car extends Vehicle implements Common{
+public class Truck extends Vehicle implements Common{
 
-    protected String seatingsMaterial;
-    protected int horsePower;
-
+    boolean hasCoupled;
+    int axisQuantty;
+    
     /**
      * Builds the entity with default params.
      */
-    public Car() {
+    public Truck() {
 	   super();
+	   this.axisQuantty = 0;
+	   this.hasCoupled = false;
     }
 
     /**
      * Builds the entity with 1 param.
-     * 
      * @param color Color of the entity.
      */
-    public Car(String color) {
+    public Truck(String color) {
 	   super(color);
     }
 
     /**
      * Builds the entity with 2 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      */
-    public Car(String color, String brand) {
+    public Truck(String color, String brand) {
 	   super(color, brand);
     }
 
     /**
      * Builds the entity with 3 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
      */
-    public Car(String color, String brand, String model) {
+    public Truck(String color, String brand, String model) {
 	   super(color, brand, model);
     }
 
     /**
      * Builds the entity with 4 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
      * @param patent Patent of the entity.
      */
-    public Car(String color, String brand, String model, String patent) {
+    public Truck(String color, String brand, String model, String patent) {
 	   super(color, brand, model, patent);
     }
 
     /**
      * Builds the entity with 5 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
      * @param patent Patent of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Car(String color, String brand, String model, String patent, int seatingQuantty) {
+    public Truck(String color, String brand, String model, String patent, int seatingQuantty) {
 	   super(color, brand, model, patent, seatingQuantty);
     }
 
     /**
      * Builds the entity with 6 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
@@ -101,13 +97,12 @@ public class Car extends Vehicle implements Common{
      * @param chassisNumber Chassis number of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, int seatingQuantty) {
+    public Truck(String color, String brand, String model, String patent, String chassisNumber, int seatingQuantty) {
 	   super(color, brand, model, patent, chassisNumber, seatingQuantty);
     }
 
     /**
-     * Builds the entity with 7 params.
-     * 
+     * Builds the entity with 5 params.
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
@@ -116,13 +111,12 @@ public class Car extends Vehicle implements Common{
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty) {
+    public Truck(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty) {
 	   super(color, brand, model, patent, chassisNumber, motor, seatingQuantty);
     }
     
     /**
      * Builds the entity with 8 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
@@ -130,16 +124,15 @@ public class Car extends Vehicle implements Common{
      * @param chassisNumber Chassis number of the entity.
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
-     * @param seatingMAterial Type of material for the seatings of the entity.
+     * @param axisQuantty Quantity of axis of the entity.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String seatingsMaterial) {
+    public Truck(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, int axisQuantty) {
 	   super(color, brand, model, patent, chassisNumber, motor, seatingQuantty);
-	   this.seatingsMaterial = seatingsMaterial;
+	   this.axisQuantty = axisQuantty;
     }
     
     /**
      * Builds the entity with 9 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
@@ -147,12 +140,19 @@ public class Car extends Vehicle implements Common{
      * @param chassisNumber Chassis number of the entity.
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
-     * @param seatingMaterial Type of material for the seatings of the entity.
-     * @param horsePower Number of horses of the motor of the entity.
+     * @param axisQuantty Quantity of axis of the entity.
+     * @param hasCoupled Possibility of coupled of the entity.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String seatingsMaterial, int horsePower) {
-	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty, seatingsMaterial);
-	   this.horsePower = horsePower;
+    public Truck(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, int axisQuantty, boolean hasCoupled) {
+	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty, axisQuantty);
+	   this.hasCoupled = hasCoupled;
+    }
+
+    /**
+     * @return the axisQuantty
+     */
+    public int getAxisQuantty() {
+        return axisQuantty;
     }
 
     @Override
@@ -170,13 +170,6 @@ public class Car extends Vehicle implements Common{
 	   return super.getColor();
     }
 
-    /**
-     * @return the horsePower
-     */
-    public int getHorsePower() {
-	   return horsePower;
-    }
-
     @Override
     public String getModel() {
 	   return super.getModel();
@@ -192,11 +185,23 @@ public class Car extends Vehicle implements Common{
 	   return super.getPatent();
     }
 
+    @Override
+    public int getSeatingQuantty() {
+	   return super.getSeatingQuantty();
+    }
+
     /**
-     * @return the seatingsMaterial
+     * @return the hasCoupled
      */
-    public String getSeatingsMaterial() {
-	   return seatingsMaterial;
+    public boolean isHasCoupled() {
+        return hasCoupled;
+    }
+
+    /**
+     * @param axisQuantty the axisQuantty to set
+     */
+    public void setAxisQuantty(int axisQuantty) {
+        this.axisQuantty = axisQuantty;
     }
 
     @Override
@@ -215,10 +220,10 @@ public class Car extends Vehicle implements Common{
     }
 
     /**
-     * @param horsePower the horsePower to set
+     * @param hasCoupled the hasCoupled to set
      */
-    public void setHorsePower(int horsePower) {
-	   this.horsePower = horsePower;
+    public void setHasCoupled(boolean hasCoupled) {
+        this.hasCoupled = hasCoupled;
     }
 
     @Override
@@ -237,30 +242,13 @@ public class Car extends Vehicle implements Common{
     }
 
     @Override
-    public int getSeatingQuantty() {
-	   // TODO Auto-generated method stub
-	   return super.getSeatingQuantty();
-    }
-
-    @Override
     public void setSeatingQuantty(int seatingQuantty) {
-	   // TODO Auto-generated method stub
 	   super.setSeatingQuantty(seatingQuantty);
     }
 
-    /**
-     * @param seatingsMaterial the seatingsMaterial to set
-     */
-    public void setSeatingsMaterial(String seatingsMaterial) {
-	   this.seatingsMaterial = seatingsMaterial;
-    }
-
-    /**
-     * Shows a greeting.
-     */
     @Override
     public void Greetings() {
-	   String brand = getBrand();
-	   System.out.println("Hi, i`m a car and my brand is: " + brand);
+	   int axisQtty = getAxisQuantty();
+	   System.out.println("Hi, i`m a Truck and my axis quantity is: " + axisQtty);
     }
 }

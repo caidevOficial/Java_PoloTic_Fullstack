@@ -17,17 +17,21 @@
 
 package base;
 
+import base.Interface.Common;
+
 /**
  * @author FacuFalcone - CaidevOficial
  */
-public class Vehicle {
+public class Vehicle implements Common{
 
 	// Atributes
 	protected String color;
 	protected String brand;
 	protected String model;
 	protected String patent;
-	protected int doorsQuantty;
+	protected String chassisNumber;
+	protected String motor;
+	protected int seatingQuantty;
 	
 	/**
 	 * Builds the entity with default params.
@@ -37,31 +41,34 @@ public class Vehicle {
 		this.brand = "";
 		this.model = "";
 		this.patent = "";
-		this.doorsQuantty = 0;
+		this.seatingQuantty = 0;
+		this.chassisNumber = "";
+		this.motor = "";
 	}
 	
 	/**
 	 * Builds the entity with 1 param
-	 * @param color
+	 * @param color Color of the entity.
 	 */
 	public Vehicle(String color) {
 		this.color = color;
 	}
-	
-	/**
+
+    /**
 	 * Builds the entity with 2 params.
-	 * @param color
-	 * @param brand
+	 * @param color Color of the entity.
+	 * @param brand Brand of the entity.
 	 */
 	public Vehicle(String color, String brand) {
 		this.color = color;
 		this.brand = brand;
 	}
-	
-	/**
-	 * @param color
-	 * @param brand
-	 * @param model
+
+    /**
+     * Builds the entity with 3 params.
+	 * @param color Color of the entity.
+	 * @param brand Brand of the entity.
+	 * @param brand Model of the entity.
 	 */
 	public Vehicle(String color, String brand, String model) {
 		this.color = color;
@@ -70,11 +77,11 @@ public class Vehicle {
 	}
 	
 	/**
-	 * Builds the entity with 3 params.
-	 * @param color
-	 * @param brand
-	 * @param model
-	 * @param patent
+	 * Builds the entity with 4 params.
+	 * @param color Color of the entity.
+	 * @param brand Brand of the entity.
+	 * @param brand Model of the entity.
+	 * @param patent Patent of the entity.
 	 */
 	public Vehicle(String color, String brand, String model, String patent) {
 		this.color = color;
@@ -84,20 +91,72 @@ public class Vehicle {
 	}
 	
 	/**
-	 * Builds the entity with 4 params.
-	 * @param color
-	 * @param brand
-	 * @param model
-	 * @param patent
+	 * Builds the entity with 5 params.
+	 * @param color Color of the entity.
+	 * @param brand Brand of the entity.
+	 * @param brand Model of the entity.
+	 * @param patent Patent of the entity.
 	 * @param doorsQuantty
 	 */
-	public Vehicle(String color, String brand, String model, String patent, int doorsQuantty) {
+	public Vehicle(String color, String brand, String model, String patent, int seatingQuantty) {
 		this.color = color;
 		this.brand = brand;
 		this.model = model;
 		this.patent = patent;
-		this.doorsQuantty = doorsQuantty;
+		this.seatingQuantty = seatingQuantty;
 	}
+	
+	/**
+     * Builds the entity with 6 params.
+     * @param color Color of the entity.
+     * @param brand Brand of the entity.
+     * @param brand Model of the entity.
+     * @param patent Patent of the entity.
+     * @param chassisNumber Chassis number of the entity.
+     * @param doorsQuantty
+     */
+    public Vehicle(String color, String brand, String model, String patent, String chassisNumber, int seatingQuantty) {
+	   this.color = color;
+	   this.brand = brand;
+	   this.model = model;
+	   this.patent = patent;
+	   this.chassisNumber = chassisNumber;
+	   this.seatingQuantty = seatingQuantty;
+    }
+	
+	/**
+	 * Builds the entity with 7 params.
+     * @param color Color of the entity.
+     * @param brand Brand of the entity.
+     * @param brand Model of the entity.
+     * @param patent Patent of the entity.
+     * @param chassisNumber Chassis number of the entity.
+     * @param motor Motor model of the entity.
+     * @param seatingQuantty Quantity of seating of the entity.
+     */
+    public Vehicle(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty) {
+	   this.color = color;
+	   this.brand = brand;
+	   this.model = model;
+	   this.patent = patent;
+	   this.chassisNumber = chassisNumber;
+	   this.motor = motor;
+	   this.seatingQuantty = seatingQuantty;
+    }
+	
+	/**
+	 * @return the brand
+	 */
+	public String getBrand() {
+		return brand;
+	}
+	
+	/**
+     * @return the chassisNumber
+     */
+    public String getChassisNumber() {
+        return chassisNumber;
+    }
 	
 	/**
 	 * @return the color
@@ -107,10 +166,10 @@ public class Vehicle {
 	}
 	
 	/**
-	 * @return the brand
+	 * @return the doorsQuantty
 	 */
-	public String getBrand() {
-		return brand;
+	public int getSeatingQuantty() {
+		return seatingQuantty;
 	}
 	
 	/**
@@ -121,24 +180,17 @@ public class Vehicle {
 	}
 	
 	/**
+     * @return the motor
+     */
+    public String getMotor() {
+        return motor;
+    }
+	
+	/**
 	 * @return the patent
 	 */
 	public String getPatent() {
 		return patent;
-	}
-	
-	/**
-	 * @return the doorsQuantty
-	 */
-	public int getDoorsQuantty() {
-		return doorsQuantty;
-	}
-	
-	/**
-	 * @param color the color to set
-	 */
-	public void setColor(String color) {
-		this.color = color;
 	}
 	
 	/**
@@ -149,23 +201,49 @@ public class Vehicle {
 	}
 	
 	/**
+     * @param chassisNumber the chassisNumber to set
+     */
+    public void setChassisNumber(String chassisNumber) {
+        this.chassisNumber = chassisNumber;
+    }
+	
+	/**
+	 * @param color the color to set
+	 */
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+    /**
+	 * @param doorsQuantty the doorsQuantty to set
+	 */
+	public void setSeatingQuantty(int seatingQuantty) {
+		this.seatingQuantty = seatingQuantty;
+	}
+
+    /**
 	 * @param model the model to set
 	 */
 	public void setModel(String model) {
 		this.model = model;
 	}
-	
-	/**
+
+    /**
+     * @param motor the motor to set
+     */
+    public void setMotor(String motor) {
+        this.motor = motor;
+    }
+
+    /**
 	 * @param patent the patent to set
 	 */
 	public void setPatent(String patent) {
 		this.patent = patent;
 	}
-	
-	/**
-	 * @param doorsQuantty the doorsQuantty to set
-	 */
-	public void setDoorsQuantty(int doorsQuantty) {
-		this.doorsQuantty = doorsQuantty;
-	}
+
+    @Override
+    public void Greetings() {
+	   // TODO Auto-generated method stub   
+    }
 }

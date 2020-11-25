@@ -18,82 +18,81 @@
 package base.SubClass;
 
 import base.Vehicle;
-import base.Interface.*;
+import base.Interface.Common;
 
 /**
  * @author FacuFalcone - CaidevOficial
  *
  */
-public class Car extends Vehicle implements Common{
+public class Bus extends Vehicle implements Common{
+ 
 
-    protected String seatingsMaterial;
-    protected int horsePower;
-
+    boolean suitableDisabled;
+    boolean haveCardLector;
+    String busType;
+    
     /**
      * Builds the entity with default params.
      */
-    public Car() {
+    public Bus() {
 	   super();
+	   this.busType = "";
+	   this.suitableDisabled = false;
+	   this.haveCardLector = false;
     }
 
     /**
      * Builds the entity with 1 param.
-     * 
      * @param color Color of the entity.
      */
-    public Car(String color) {
+    public Bus(String color) {
 	   super(color);
     }
 
     /**
      * Builds the entity with 2 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      */
-    public Car(String color, String brand) {
+    public Bus(String color, String brand) {
 	   super(color, brand);
     }
 
     /**
      * Builds the entity with 3 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
      */
-    public Car(String color, String brand, String model) {
+    public Bus(String color, String brand, String model) {
 	   super(color, brand, model);
     }
 
     /**
-     * Builds the entity with 4 params.
-     * 
+     * Builds the entity with 4 parqams.
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
      * @param patent Patent of the entity.
      */
-    public Car(String color, String brand, String model, String patent) {
+    public Bus(String color, String brand, String model, String patent) {
 	   super(color, brand, model, patent);
     }
 
     /**
      * Builds the entity with 5 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
      * @param patent Patent of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Car(String color, String brand, String model, String patent, int seatingQuantty) {
+    public Bus(String color, String brand, String model, String patent, int seatingQuantty) {
 	   super(color, brand, model, patent, seatingQuantty);
     }
 
     /**
      * Builds the entity with 6 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
@@ -101,13 +100,12 @@ public class Car extends Vehicle implements Common{
      * @param chassisNumber Chassis number of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, int seatingQuantty) {
+    public Bus(String color, String brand, String model, String patent, String chassisNumber, int seatingQuantty) {
 	   super(color, brand, model, patent, chassisNumber, seatingQuantty);
     }
 
     /**
      * Builds the entity with 7 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
@@ -116,13 +114,12 @@ public class Car extends Vehicle implements Common{
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty) {
+    public Bus(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty) {
 	   super(color, brand, model, patent, chassisNumber, motor, seatingQuantty);
     }
     
     /**
      * Builds the entity with 8 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
@@ -130,16 +127,15 @@ public class Car extends Vehicle implements Common{
      * @param chassisNumber Chassis number of the entity.
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
-     * @param seatingMAterial Type of material for the seatings of the entity.
+     * @param busType Type of bus of the entity.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String seatingsMaterial) {
+    public Bus(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String busType) {
 	   super(color, brand, model, patent, chassisNumber, motor, seatingQuantty);
-	   this.seatingsMaterial = seatingsMaterial;
+	   this.busType = busType;
     }
     
     /**
      * Builds the entity with 9 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      * @param model Model of the entity.
@@ -147,95 +143,58 @@ public class Car extends Vehicle implements Common{
      * @param chassisNumber Chassis number of the entity.
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
-     * @param seatingMaterial Type of material for the seatings of the entity.
-     * @param horsePower Number of horses of the motor of the entity.
+     * @param busType Type of bus of the entity.
+     * @param suitableDisabled boolean to dennote if it's suitable for disabled people.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String seatingsMaterial, int horsePower) {
-	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty, seatingsMaterial);
-	   this.horsePower = horsePower;
+    public Bus(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String busType, boolean suitableDisabled) {
+	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty, busType);
+	   this.suitableDisabled = suitableDisabled;
+    }
+    
+    /**
+     * Builds the entity with 10 params.
+     * @param color Color of the entity.
+     * @param brand Brand of the entity.
+     * @param model Model of the entity.
+     * @param patent Patent of the entity.
+     * @param chassisNumber Chassis number of the entity.
+     * @param motor Motor model of the entity.
+     * @param seatingQuantty Quantity of seating of the entity.
+     * @param busType Type of bus of the entity.
+     * @param suitableDisabled boolean to dennote if it's suitable for disabled people.
+     * @param haveCardLector Boolean to dennote if the entity has card Lector or not.
+     */
+    public Bus(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String busType, boolean suitableDisabled, boolean haveCardLector) {
+	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty, busType, suitableDisabled);
+	   this.haveCardLector = haveCardLector;
     }
 
     @Override
     public String getBrand() {
+	   // TODO Auto-generated method stub
 	   return super.getBrand();
+    }
+
+    /**
+     * @return the busType
+     */
+    public String getBusType() {
+        return busType;
     }
 
     @Override
     public String getChassisNumber() {
+	   // TODO Auto-generated method stub
 	   return super.getChassisNumber();
     }
 
     @Override
     public String getColor() {
+	   // TODO Auto-generated method stub
 	   return super.getColor();
     }
 
-    /**
-     * @return the horsePower
-     */
-    public int getHorsePower() {
-	   return horsePower;
-    }
-
-    @Override
-    public String getModel() {
-	   return super.getModel();
-    }
-
-    @Override
-    public String getMotor() {
-	   return super.getMotor();
-    }
-
-    @Override
-    public String getPatent() {
-	   return super.getPatent();
-    }
-
-    /**
-     * @return the seatingsMaterial
-     */
-    public String getSeatingsMaterial() {
-	   return seatingsMaterial;
-    }
-
-    @Override
-    public void setBrand(String brand) {
-	   super.setBrand(brand);
-    }
-
-    @Override
-    public void setChassisNumber(String chassisNumber) {
-	   super.setChassisNumber(chassisNumber);
-    }
-
-    @Override
-    public void setColor(String color) {
-	   super.setColor(color);
-    }
-
-    /**
-     * @param horsePower the horsePower to set
-     */
-    public void setHorsePower(int horsePower) {
-	   this.horsePower = horsePower;
-    }
-
-    @Override
-    public void setModel(String model) {
-	   super.setModel(model);
-    }
-
-    @Override
-    public void setMotor(String motor) {
-	   super.setMotor(motor);
-    }
-
-    @Override
-    public void setPatent(String patent) {
-	   super.setPatent(patent);
-    }
-
+    
     @Override
     public int getSeatingQuantty() {
 	   // TODO Auto-generated method stub
@@ -248,19 +207,100 @@ public class Car extends Vehicle implements Common{
 	   super.setSeatingQuantty(seatingQuantty);
     }
 
-    /**
-     * @param seatingsMaterial the seatingsMaterial to set
-     */
-    public void setSeatingsMaterial(String seatingsMaterial) {
-	   this.seatingsMaterial = seatingsMaterial;
+    @Override
+    public String getModel() {
+	   // TODO Auto-generated method stub
+	   return super.getModel();
+    }
+
+    @Override
+    public String getMotor() {
+	   // TODO Auto-generated method stub
+	   return super.getMotor();
+    }
+
+    @Override
+    public String getPatent() {
+	   // TODO Auto-generated method stub
+	   return super.getPatent();
     }
 
     /**
-     * Shows a greeting.
+     * @return the haveCardLector
      */
+    public boolean isHaveCardLector() {
+        return haveCardLector;
+    }
+
+    /**
+     * @return the suitableDisabled
+     */
+    public boolean isSuitableDisabled() {
+        return suitableDisabled;
+    }
+
+    @Override
+    public void setBrand(String brand) {
+	   // TODO Auto-generated method stub
+	   super.setBrand(brand);
+    }
+
+    /**
+     * @param busType the busType to set
+     */
+    public void setBusType(String busType) {
+        this.busType = busType;
+    }
+
+    @Override
+    public void setChassisNumber(String chassisNumber) {
+	   // TODO Auto-generated method stub
+	   super.setChassisNumber(chassisNumber);
+    }
+
+    @Override
+    public void setColor(String color) {
+	   // TODO Auto-generated method stub
+	   super.setColor(color);
+    }
+
+    
+    /**
+     * @param haveCardLector the haveCardLector to set
+     */
+    public void setHaveCardLector(boolean haveCardLector) {
+        this.haveCardLector = haveCardLector;
+    }
+
+    @Override
+    public void setModel(String model) {
+	   // TODO Auto-generated method stub
+	   super.setModel(model);
+    }
+
+    @Override
+    public void setMotor(String motor) {
+	   // TODO Auto-generated method stub
+	   super.setMotor(motor);
+    }
+
+    @Override
+    public void setPatent(String patent) {
+	   // TODO Auto-generated method stub
+	   super.setPatent(patent);
+    }
+
+    /**
+     * @param suitableDisabled the suitableDisabled to set
+     */
+    public void setSuitableDisabled(boolean suitableDisabled) {
+        this.suitableDisabled = suitableDisabled;
+    }
+    
     @Override
     public void Greetings() {
-	   String brand = getBrand();
-	   System.out.println("Hi, i`m a car and my brand is: " + brand);
+	   int seatingQuantity = getSeatingQuantty();
+	   System.out.println("Hi, i`m a Bus and my seatings are: " + seatingQuantity);
     }
+
 }
