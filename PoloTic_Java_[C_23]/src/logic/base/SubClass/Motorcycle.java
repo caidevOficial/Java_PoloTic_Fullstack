@@ -15,146 +15,147 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package base.SubClass;
+package logic.base.SubClass;
 
-import base.Vehicle;
-import base.Interface.*;
+import logic.base.Vehicle;
+import logic.base.Interface.Common;
 
 /**
  * @author FacuFalcone - CaidevOficial
  */
-public class Car extends Vehicle implements Common{
+public class Motorcycle extends Vehicle implements Common{
 
     // Atributes
-    protected String seatingsMaterial;
-    protected int horsePower;
-
+    protected String handleMaterial;
+    protected int displacement;
+    
     /**
      * Builds the entity with default params.
      */
-    public Car() {
+    public Motorcycle() {
 	   super();
-	   this.seatingsMaterial = "";
-	   this.horsePower = 0;
+	   this.handleMaterial = "";
+	   this.displacement = 0;
     }
 
     /**
      * Builds the entity with 1 param.
-     * 
      * @param color Color of the entity.
      */
-    public Car(String color) {
+    public Motorcycle(String color) {
 	   super(color);
     }
 
     /**
+     * @param handleMaterial Material of the handle of the entity.
+     * @param displacement Amount of displacement of the entity.
+     */
+    public Motorcycle(String handleMaterial, int displacement) {
+	   super();
+	   this.handleMaterial = handleMaterial;
+	   this.displacement = displacement;
+    }
+
+    /**
      * Builds the entity with 2 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      */
-    public Car(String color, String brand) {
+    public Motorcycle(String color, String brand) {
 	   super(color, brand);
     }
 
     /**
      * Builds the entity with 3 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param model Model of the entity.
+     * @param brand Model of the entity.
      */
-    public Car(String color, String brand, String model) {
+    public Motorcycle(String color, String brand, String model) {
 	   super(color, brand, model);
     }
 
     /**
      * Builds the entity with 4 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param model Model of the entity.
+     * @param brand Model of the entity.
      * @param patent Patent of the entity.
      */
-    public Car(String color, String brand, String model, String patent) {
+    public Motorcycle(String color, String brand, String model, String patent) {
 	   super(color, brand, model, patent);
     }
 
     /**
      * Builds the entity with 5 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param model Model of the entity.
+     * @param brand Model of the entity.
      * @param patent Patent of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Car(String color, String brand, String model, String patent, int seatingQuantty) {
+    public Motorcycle(String color, String brand, String model, String patent, int seatingQuantty) {
 	   super(color, brand, model, patent, seatingQuantty);
     }
 
     /**
      * Builds the entity with 6 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param model Model of the entity.
+     * @param brand Model of the entity.
      * @param patent Patent of the entity.
      * @param chassisNumber Chassis number of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, int seatingQuantty) {
+    public Motorcycle(String color, String brand, String model, String patent, String chassisNumber, int seatingQuantty) {
 	   super(color, brand, model, patent, chassisNumber, seatingQuantty);
     }
 
     /**
      * Builds the entity with 7 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param model Model of the entity.
+     * @param brand Model of the entity.
      * @param patent Patent of the entity.
      * @param chassisNumber Chassis number of the entity.
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty) {
+    public Motorcycle(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty) {
 	   super(color, brand, model, patent, chassisNumber, motor, seatingQuantty);
     }
     
     /**
      * Builds the entity with 8 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param model Model of the entity.
+     * @param brand Model of the entity.
      * @param patent Patent of the entity.
      * @param chassisNumber Chassis number of the entity.
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
-     * @param seatingMAterial Type of material for the seatings of the entity.
+     * @param handleMaterial Material of the handle of the entity.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String seatingsMaterial) {
-	   super(color, brand, model, patent, chassisNumber, motor, seatingQuantty);
-	   this.seatingsMaterial = seatingsMaterial;
+    public Motorcycle(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String handleMaterial) {
+	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty);
+	   this.handleMaterial = handleMaterial;
     }
     
     /**
      * Builds the entity with 9 params.
-     * 
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param model Model of the entity.
+     * @param brand Model of the entity.
      * @param patent Patent of the entity.
      * @param chassisNumber Chassis number of the entity.
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
-     * @param seatingMaterial Type of material for the seatings of the entity.
-     * @param horsePower Number of horses of the motor of the entity.
+     * @param handleMaterial MAterial of the handle of the entity.
+     * @param displacement Amount of displacement of the entity.
      */
-    public Car(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String seatingsMaterial, int horsePower) {
-	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty, seatingsMaterial);
-	   this.horsePower = horsePower;
+    public Motorcycle(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String handleMaterial, int displacement) {
+	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty, handleMaterial);
+	   this.displacement = displacement;
     }
 
     @Override
@@ -173,10 +174,17 @@ public class Car extends Vehicle implements Common{
     }
 
     /**
-     * @return the horsePower
+     * @return the displacement
      */
-    public int getHorsePower() {
-	   return horsePower;
+    public int getDisplacement() {
+        return displacement;
+    }
+
+    /**
+     * @return the handleMaterial
+     */
+    public String getHandleMaterial() {
+        return handleMaterial;
     }
 
     @Override
@@ -192,13 +200,6 @@ public class Car extends Vehicle implements Common{
     @Override
     public String getPatent() {
 	   return super.getPatent();
-    }
-
-    /**
-     * @return the seatingsMaterial
-     */
-    public String getSeatingsMaterial() {
-	   return seatingsMaterial;
     }
 
     @Override
@@ -217,10 +218,18 @@ public class Car extends Vehicle implements Common{
     }
 
     /**
-     * @param horsePower the horsePower to set
+     * @param displacement the displacement to set
      */
-    public void setHorsePower(int horsePower) {
-	   this.horsePower = horsePower;
+    public void setDisplacement(int displacement) {
+        this.displacement = displacement;
+    }
+
+    
+    /**
+     * @param handleMaterial the handleMaterial to set
+     */
+    public void setHandleMaterial(String handleMaterial) {
+        this.handleMaterial = handleMaterial;
     }
 
     @Override
@@ -240,29 +249,17 @@ public class Car extends Vehicle implements Common{
 
     @Override
     public int getSeatingQuantty() {
-	   // TODO Auto-generated method stub
 	   return super.getSeatingQuantty();
     }
 
     @Override
     public void setSeatingQuantty(int seatingQuantty) {
-	   // TODO Auto-generated method stub
 	   super.setSeatingQuantty(seatingQuantty);
     }
 
-    /**
-     * @param seatingsMaterial the seatingsMaterial to set
-     */
-    public void setSeatingsMaterial(String seatingsMaterial) {
-	   this.seatingsMaterial = seatingsMaterial;
-    }
-
-    /**
-     * Shows a greeting.
-     */
     @Override
     public void Greetings() {
-	   String brand = getBrand();
-	   System.out.println("Hi, i`m a car and my brand is: " + brand);
+	   int displacement = getDisplacement();
+	   System.out.println("Hi, i`m a MotorCycle and my displacement is: " + displacement);
     }
 }

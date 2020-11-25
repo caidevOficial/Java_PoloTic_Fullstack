@@ -15,13 +15,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package mainPkg;
+package logic;
 
-import base.Vehicle;
-import base.SubClass.Bus;
-import base.SubClass.Car;
-import base.SubClass.Motorcycle;
-import base.SubClass.Truck;
+import logic.base.Vehicle;
+import logic.base.SubClass.Bus;
+import logic.base.SubClass.Car;
+import logic.base.SubClass.Motorcycle;
+import logic.base.SubClass.Truck;
 
 /**
  * @author FacuFalcone - CaidevOficial

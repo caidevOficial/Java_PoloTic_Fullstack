@@ -1,7 +1,7 @@
 /**
  * 
  */
-package base.Abstract;
+package logic.base.Abstract;
 
 /**
  * @author FacuFalcone - CaidevOficial

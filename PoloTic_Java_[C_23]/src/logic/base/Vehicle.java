@@ -15,10 +15,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package base;
+package logic.base;
 
-import base.Abstract.IVehicle;
-import base.Interface.Common;
+import logic.base.Abstract.IVehicle;
+import logic.base.Interface.Common;
 
 /**
  * @author FacuFalcone - CaidevOficial

@@ -15,45 +15,37 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package base.SubClass;
+package logic.base.SubClass;
 
-import base.Vehicle;
-import base.Interface.Common;
+import logic.base.Vehicle;
+import logic.base.Interface.Common;
 
 /**
  * @author FacuFalcone - CaidevOficial
  */
-public class Motorcycle extends Vehicle implements Common{
-
+public class Bus extends Vehicle implements Common{
+ 
     // Atributes
-    protected String handleMaterial;
-    protected int displacement;
+    boolean suitableDisabled;
+    boolean hasCardLector;
+    String busType;
     
     /**
      * Builds the entity with default params.
      */
-    public Motorcycle() {
+    public Bus() {
 	   super();
-	   this.handleMaterial = "";
-	   this.displacement = 0;
+	   this.busType = "";
+	   this.suitableDisabled = false;
+	   this.hasCardLector = false;
     }
 
     /**
      * Builds the entity with 1 param.
      * @param color Color of the entity.
      */
-    public Motorcycle(String color) {
+    public Bus(String color) {
 	   super(color);
-    }
-
-    /**
-     * @param handleMaterial Material of the handle of the entity.
-     * @param displacement Amount of displacement of the entity.
-     */
-    public Motorcycle(String handleMaterial, int displacement) {
-	   super();
-	   this.handleMaterial = handleMaterial;
-	   this.displacement = displacement;
     }
 
     /**
@@ -61,7 +53,7 @@ public class Motorcycle extends Vehicle implements Common{
      * @param color Color of the entity.
      * @param brand Brand of the entity.
      */
-    public Motorcycle(String color, String brand) {
+    public Bus(String color, String brand) {
 	   super(color, brand);
     }
 
@@ -69,20 +61,20 @@ public class Motorcycle extends Vehicle implements Common{
      * Builds the entity with 3 params.
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param brand Model of the entity.
+     * @param model Model of the entity.
      */
-    public Motorcycle(String color, String brand, String model) {
+    public Bus(String color, String brand, String model) {
 	   super(color, brand, model);
     }
 
     /**
-     * Builds the entity with 4 params.
+     * Builds the entity with 4 parqams.
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param brand Model of the entity.
+     * @param model Model of the entity.
      * @param patent Patent of the entity.
      */
-    public Motorcycle(String color, String brand, String model, String patent) {
+    public Bus(String color, String brand, String model, String patent) {
 	   super(color, brand, model, patent);
     }
 
@@ -90,11 +82,11 @@ public class Motorcycle extends Vehicle implements Common{
      * Builds the entity with 5 params.
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param brand Model of the entity.
+     * @param model Model of the entity.
      * @param patent Patent of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Motorcycle(String color, String brand, String model, String patent, int seatingQuantty) {
+    public Bus(String color, String brand, String model, String patent, int seatingQuantty) {
 	   super(color, brand, model, patent, seatingQuantty);
     }
 
@@ -102,12 +94,12 @@ public class Motorcycle extends Vehicle implements Common{
      * Builds the entity with 6 params.
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param brand Model of the entity.
+     * @param model Model of the entity.
      * @param patent Patent of the entity.
      * @param chassisNumber Chassis number of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Motorcycle(String color, String brand, String model, String patent, String chassisNumber, int seatingQuantty) {
+    public Bus(String color, String brand, String model, String patent, String chassisNumber, int seatingQuantty) {
 	   super(color, brand, model, patent, chassisNumber, seatingQuantty);
     }
 
@@ -115,13 +107,13 @@ public class Motorcycle extends Vehicle implements Common{
      * Builds the entity with 7 params.
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param brand Model of the entity.
+     * @param model Model of the entity.
      * @param patent Patent of the entity.
      * @param chassisNumber Chassis number of the entity.
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
      */
-    public Motorcycle(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty) {
+    public Bus(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty) {
 	   super(color, brand, model, patent, chassisNumber, motor, seatingQuantty);
     }
     
@@ -129,38 +121,63 @@ public class Motorcycle extends Vehicle implements Common{
      * Builds the entity with 8 params.
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param brand Model of the entity.
+     * @param model Model of the entity.
      * @param patent Patent of the entity.
      * @param chassisNumber Chassis number of the entity.
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
-     * @param handleMaterial Material of the handle of the entity.
+     * @param busType Type of bus of the entity.
      */
-    public Motorcycle(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String handleMaterial) {
-	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty);
-	   this.handleMaterial = handleMaterial;
+    public Bus(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String busType) {
+	   super(color, brand, model, patent, chassisNumber, motor, seatingQuantty);
+	   this.busType = busType;
     }
     
     /**
      * Builds the entity with 9 params.
      * @param color Color of the entity.
      * @param brand Brand of the entity.
-     * @param brand Model of the entity.
+     * @param model Model of the entity.
      * @param patent Patent of the entity.
      * @param chassisNumber Chassis number of the entity.
      * @param motor Motor model of the entity.
      * @param seatingQuantty Quantity of seating of the entity.
-     * @param handleMaterial MAterial of the handle of the entity.
-     * @param displacement Amount of displacement of the entity.
+     * @param busType Type of bus of the entity.
+     * @param suitableDisabled boolean to dennote if it's suitable for disabled people.
      */
-    public Motorcycle(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String handleMaterial, int displacement) {
-	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty, handleMaterial);
-	   this.displacement = displacement;
+    public Bus(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String busType, boolean suitableDisabled) {
+	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty, busType);
+	   this.suitableDisabled = suitableDisabled;
+    }
+    
+    /**
+     * Builds the entity with 10 params.
+     * @param color Color of the entity.
+     * @param brand Brand of the entity.
+     * @param model Model of the entity.
+     * @param patent Patent of the entity.
+     * @param chassisNumber Chassis number of the entity.
+     * @param motor Motor model of the entity.
+     * @param seatingQuantty Quantity of seating of the entity.
+     * @param busType Type of bus of the entity.
+     * @param suitableDisabled boolean to dennote if it's suitable for disabled people.
+     * @param hasCardLector Boolean to dennote if the entity has card Lector or not.
+     */
+    public Bus(String color, String brand, String model, String patent, String chassisNumber, String motor, int seatingQuantty, String busType, boolean suitableDisabled, boolean hasCardLector) {
+	   this(color, brand, model, patent, chassisNumber, motor, seatingQuantty, busType, suitableDisabled);
+	   this.hasCardLector = hasCardLector;
     }
 
     @Override
     public String getBrand() {
 	   return super.getBrand();
+    }
+
+    /**
+     * @return the busType
+     */
+    public String getBusType() {
+        return busType;
     }
 
     @Override
@@ -173,18 +190,15 @@ public class Motorcycle extends Vehicle implements Common{
 	   return super.getColor();
     }
 
-    /**
-     * @return the displacement
-     */
-    public int getDisplacement() {
-        return displacement;
+    
+    @Override
+    public int getSeatingQuantty() {
+	   return super.getSeatingQuantty();
     }
 
-    /**
-     * @return the handleMaterial
-     */
-    public String getHandleMaterial() {
-        return handleMaterial;
+    @Override
+    public void setSeatingQuantty(int seatingQuantty) {
+	   super.setSeatingQuantty(seatingQuantty);
     }
 
     @Override
@@ -202,9 +216,30 @@ public class Motorcycle extends Vehicle implements Common{
 	   return super.getPatent();
     }
 
+    /**
+     * @return the hasCardLector
+     */
+    public boolean ishasCardLector() {
+        return hasCardLector;
+    }
+
+    /**
+     * @return the suitableDisabled
+     */
+    public boolean isSuitableDisabled() {
+        return suitableDisabled;
+    }
+
     @Override
     public void setBrand(String brand) {
 	   super.setBrand(brand);
+    }
+
+    /**
+     * @param busType the busType to set
+     */
+    public void setBusType(String busType) {
+        this.busType = busType;
     }
 
     @Override
@@ -217,19 +252,12 @@ public class Motorcycle extends Vehicle implements Common{
 	   super.setColor(color);
     }
 
-    /**
-     * @param displacement the displacement to set
-     */
-    public void setDisplacement(int displacement) {
-        this.displacement = displacement;
-    }
-
     
     /**
-     * @param handleMaterial the handleMaterial to set
+     * @param hasCardLector the hasCardLector to set
      */
-    public void setHandleMaterial(String handleMaterial) {
-        this.handleMaterial = handleMaterial;
+    public void setHasCardLector(boolean hasCardLector) {
+        this.hasCardLector = hasCardLector;
     }
 
     @Override
@@ -247,19 +275,16 @@ public class Motorcycle extends Vehicle implements Common{
 	   super.setPatent(patent);
     }
 
-    @Override
-    public int getSeatingQuantty() {
-	   return super.getSeatingQuantty();
+    /**
+     * @param suitableDisabled the suitableDisabled to set
+     */
+    public void setSuitableDisabled(boolean suitableDisabled) {
+        this.suitableDisabled = suitableDisabled;
     }
-
-    @Override
-    public void setSeatingQuantty(int seatingQuantty) {
-	   super.setSeatingQuantty(seatingQuantty);
-    }
-
+    
     @Override
     public void Greetings() {
-	   int displacement = getDisplacement();
-	   System.out.println("Hi, i`m a MotorCycle and my displacement is: " + displacement);
+	   int seatingQuantity = getSeatingQuantty();
+	   System.out.println("Hi, i`m a Bus and my seatings are: " + seatingQuantity);
     }
 }

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package base.Interface;
+package logic.base.Interface;
 
 /**
  * @author FacuFalcone - CaidevOficial
