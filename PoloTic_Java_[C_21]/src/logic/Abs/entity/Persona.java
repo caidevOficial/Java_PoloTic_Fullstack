@@ -21,7 +21,6 @@ import java.util.Date;
 
 /**
  * @author CaidevOficial
- *
  */
 public abstract class Persona {
 
