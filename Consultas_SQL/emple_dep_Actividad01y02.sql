@@ -74,10 +74,10 @@ CREATE TABLE IF NOT EXISTS `empleado` (
 INSERT INTO `empleado` (`nro_legajo`, `nombre`, `apellido`, `dni`, `fecha_nac`, `fecha_incorp`, `cargo`, `id_depto`, `sueldo`) VALUES
 (1000, 'Denu', 'Chan', '11111111', '1996-02-05', '2020-11-01', 'Game Design', 5, 65000),
 (1001, 'Facu', 'San', '11222111', '1990-02-25', '2020-10-01', 'BackEnd Dev', 2, 62059),
-(1002, 'Cata', 'Hache', '11222222', '1995-04-18', '2020-11-01', 'Web Art Design', 3, 62999),
+(1002, 'Lagertha', 'Viking', '11222222', '1995-04-18', '2020-11-01', 'Web Art Design', 3, 62999),
 (1003, 'Bianca', 'San', '11111112', '1997-05-17', '2020-11-01', 'Web Art Design', 3, 64999),
-(1004, 'Marcos', 'Russo', '11333222', '1977-10-27', '2020-11-01', 'Forense', 4, 90000),
-(1005, 'Martin', 'Isusi', '111333111', '1977-10-27', '2020-11-01', 'FrontEnd Dev', 1, 85000),
+(1004, 'Bjorn', 'Ironside', '11333222', '1977-10-27', '2020-11-01', 'Forense', 4, 90000),
+(1005, 'Ragnar', 'Lothbrock', '111333111', '1977-10-27', '2020-11-01', 'FrontEnd Dev', 1, 85000),
 (1006, 'Caidev', 'Sama', '11333000', '1990-02-25', '2020-11-01', 'Forense', 4, 90000),
 (1007, 'Guada', 'San', '11222122', '1995-02-04', '2020-10-01', 'FrontEnd Dev', 1, 56000);
 
