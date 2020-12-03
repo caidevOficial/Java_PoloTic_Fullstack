@@ -28,18 +28,28 @@ import java.awt.TextField;
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.LinkedList;
+import java.util.Vector;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import logic.Controller;
 import java.awt.Color;
 import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import javax.swing.JComboBox;
+import javax.swing.JTextPane;
+import java.awt.List;
 
 @SuppressWarnings("serial")
 public class Front extends JFrame {
 
     private JPanel contentPane;
     Controller control = new Controller();
-    private JTextField textField_showCourses;
+    private JTextField textField_dni;
+    private JTextField textField_nombre;
+    private JTextField textField_apellido;
+    private JTextField _textField_fechaNac;
+    private JTextField textField_especialidad;
     public static void ErrorMessage(String tituloPane, String errorMsg) {
 		//===================================================================
 		JOptionPane alerta = new JOptionPane(errorMsg);
@@ -88,19 +98,19 @@ public class Front extends JFrame {
 	   panel_1.setLayout(null);
 	   
 	   TextField Campo_idCurso = new TextField();
-	   Campo_idCurso.setBounds(250, 34, 70, 19);
+	   Campo_idCurso.setBounds(237, 57, 70, 19);
 	   panel_1.add(Campo_idCurso);
 	   
 	   TextField Campo_nombreCurso = new TextField();
-	   Campo_nombreCurso.setBounds(239, 59, 93, 25);
+	   Campo_nombreCurso.setBounds(237, 82, 93, 25);
 	   panel_1.add(Campo_nombreCurso);
 	   
 	   TextField Campo_horasCurso = new TextField();
-	   Campo_horasCurso.setBounds(250, 103, 77, 19);
+	   Campo_horasCurso.setBounds(237, 113, 77, 19);
 	   panel_1.add(Campo_horasCurso);
 	   
 	   JCheckBox Campo_certifCurso = new JCheckBox("");
-	   Campo_certifCurso.setBounds(282, 138, 21, 23);
+	   Campo_certifCurso.setBounds(264, 138, 21, 23);
 	   panel_1.add(Campo_certifCurso);
 	   
 	   JLabel lblCertific = new JLabel("Con Certificado:");
@@ -114,37 +124,41 @@ public class Front extends JFrame {
 	   lblCargarCurso.setForeground(Color.WHITE);
 	   
 	   JLabel lblIdCurso = new JLabel("ID Curso:");
-	   lblIdCurso.setBounds(123, 34, 64, 15);
+	   lblIdCurso.setBounds(155, 59, 64, 15);
 	   panel_1.add(lblIdCurso);
 	   lblIdCurso.setForeground(Color.WHITE);
 	   
 	   JLabel lblNombreCurso = new JLabel("Nombre Curso:");
-	   lblNombreCurso.setBounds(117, 65, 105, 19);
+	   lblNombreCurso.setBounds(117, 91, 105, 19);
 	   panel_1.add(lblNombreCurso);
 	   lblNombreCurso.setForeground(Color.WHITE);
 	   
 	   JLabel lblHorasCurso = new JLabel("Horas Curso:");
-	   lblHorasCurso.setBounds(117, 103, 112, 23);
+	   lblHorasCurso.setBounds(132, 114, 93, 23);
 	   panel_1.add(lblHorasCurso);
 	   lblHorasCurso.setForeground(Color.WHITE);
 	   
 	   JButton btnAgregar = new JButton("Cargar Curso");
 	   btnAgregar.setBounds(155, 173, 127, 25);
 	   panel_1.add(btnAgregar);
-	   
-	   textField_showCourses = new JTextField();
-	   textField_showCourses.setBounds(12, 226, 410, 103);
-	   panel_1.add(textField_showCourses);
-	   textField_showCourses.setColumns(10);
+
+	   JTextArea textArea_ShowCourses = new JTextArea();
+	   textArea_ShowCourses.setBounds(12, 228, 410, 101);
+	   panel_1.add(textArea_ShowCourses);
+
+	   JComboBox<Vector<?>> comboBox_curso = new JComboBox<Vector<?>>();
+	   comboBox_curso.setMaximumRowCount(10);
+	   comboBox_curso.setBounds(135, 159, 152, 24);
 	   
 	   JButton btnShowCourses = new JButton("Ver Cursos");
 	   btnShowCourses.addActionListener(new ActionListener() {
 	   	public void actionPerformed(ActionEvent arg0) {
-	   	 textField_showCourses.setText(control.PrintCourses());
+	   	 textArea_ShowCourses.setText(control.PrintCourses());
 	   	}
 	   });
 	   btnShowCourses.setBounds(165, 341, 117, 25);
 	   panel_1.add(btnShowCourses);
+	   
 	   btnAgregar.addActionListener(new ActionListener() {
 	   	
 		  public void actionPerformed(ActionEvent arg0) {
@@ -155,6 +169,7 @@ public class Front extends JFrame {
         		}else {
         		    Controller.addCourseLL(Campo_idCurso.getText(), Campo_horasCurso.getText(), Campo_nombreCurso.getText(), Campo_certifCurso.isSelected());
         		    SuccessMessage("Exito!", "Curso cargado con exito!");
+        		    comboBox_curso.addItem(Controller.getAllCourses());
         		}
 	   	}
 	   });
@@ -165,5 +180,110 @@ public class Front extends JFrame {
 	   panel_2.setBackground(Color.DARK_GRAY);
 	   panel_2.setBounds(12, 7, 408, 398);
 	   panel.add(panel_2);
+	   panel_2.setLayout(null);
+	   
+	   panel_2.add(comboBox_curso);
+
+	   JLabel lblDni = new JLabel("DNI:");
+	   lblDni.setForeground(Color.WHITE);
+	   lblDni.setBounds(81, 36, 29, 15);
+	   panel_2.add(lblDni);
+	   
+	   JLabel lblCargarProfesor = new JLabel("Cargar Profesor");
+	   lblCargarProfesor.setBounds(164, 5, 113, 15);
+	   lblCargarProfesor.setForeground(Color.WHITE);
+	   panel_2.add(lblCargarProfesor);
+	   
+	   JLabel lblNombre = new JLabel("Nombre:");
+	   lblNombre.setForeground(Color.WHITE);
+	   lblNombre.setBounds(53, 59, 70, 15);
+	   panel_2.add(lblNombre);
+	   
+	   JLabel lblApellido = new JLabel("Apellido:");
+	   lblApellido.setForeground(Color.WHITE);
+	   lblApellido.setBounds(53, 86, 70, 15);
+	   panel_2.add(lblApellido);
+	   
+	   JLabel lblFechaNac = new JLabel("Fecha Nac:");
+	   lblFechaNac.setForeground(Color.WHITE);
+	   lblFechaNac.setBounds(41, 113, 82, 15);
+	   panel_2.add(lblFechaNac);
+	   
+	   JLabel lblEspecialidad = new JLabel("Especialidad: ");
+	   lblEspecialidad.setForeground(Color.WHITE);
+	   lblEspecialidad.setBounds(25, 140, 98, 15);
+	   panel_2.add(lblEspecialidad);
+	   
+	   JLabel lblCurso = new JLabel("Curso:");
+	   lblCurso.setForeground(Color.WHITE);
+	   lblCurso.setBounds(70, 164, 53, 15);
+	   panel_2.add(lblCurso);
+	   
+	   textField_dni = new JTextField();
+	   textField_dni.setBounds(135, 34, 114, 19);
+	   panel_2.add(textField_dni);
+	   textField_dni.setColumns(10);
+	   
+	   textField_nombre = new JTextField();
+	   textField_nombre.setBounds(135, 57, 114, 19);
+	   panel_2.add(textField_nombre);
+	   textField_nombre.setColumns(10);
+	   
+	   textField_apellido = new JTextField();
+	   textField_apellido.setText("");
+	   textField_apellido.setBounds(135, 84, 114, 19);
+	   panel_2.add(textField_apellido);
+	   textField_apellido.setColumns(10);
+	   
+	   _textField_fechaNac = new JTextField();
+	   _textField_fechaNac.setText("");
+	   _textField_fechaNac.setBounds(135, 111, 114, 19);
+	   panel_2.add(_textField_fechaNac);
+	   _textField_fechaNac.setColumns(10);
+	   
+	   textField_especialidad = new JTextField();
+	   textField_especialidad.setText("");
+	   textField_especialidad.setBounds(135, 138, 114, 19);
+	   panel_2.add(textField_especialidad);
+	   textField_especialidad.setColumns(10);
+	   
+	   
+	   JTextArea textArea_verProfes = new JTextArea();
+	   textArea_verProfes.setBounds(12, 224, 384, 103);
+	   panel_2.add(textArea_verProfes);
+	   
+	   JButton btnCargarProfe = new JButton("Cargar Profe");
+	   btnCargarProfe.addActionListener(new ActionListener() {
+		  
+	   	public void actionPerformed(ActionEvent arg0) {
+	   	    if(textField_dni.getText().equals("") ||
+	   			  textField_nombre.getText().equals("") ||
+	   			  textField_apellido.getText().equals("") ||
+	   			  textField_especialidad.getText().equals("") ||
+	   			  _textField_fechaNac.getText().equals("")) {
+	   		   ErrorMessage("Error", "Hay al menos un campo sin completar!.");
+	   	    }else {
+	   		   if(Controller.addProfessorLL(textField_dni.getText(), textField_nombre.getText(), textField_apellido.getText(), _textField_fechaNac.getText(), textField_especialidad.getText(), comboBox_curso.getSelectedIndex())) {
+	   			  SuccessMessage("Exito", "Profesor agregado con exito!");	   			  
+	   		   }else {
+	   			  ErrorMessage("Error de carga", "Algo fallo al cargar el profesor.");
+	   		   }
+	   	    }
+	   	}
+	   });
+	   
+	   btnCargarProfe.setBounds(132, 187, 145, 25);
+	   panel_2.add(btnCargarProfe);
+	   
+	   JButton btnVerProfes = new JButton("Ver Profes");
+	   btnVerProfes.addActionListener(new ActionListener() {
+		  
+	   	public void actionPerformed(ActionEvent arg0) {
+	   	    textArea_verProfes.setText(control.PrintProfessors());
+	   	}
+	   });
+	   
+	   btnVerProfes.setBounds(132, 339, 117, 25);
+	   panel_2.add(btnVerProfes);
     }
 }

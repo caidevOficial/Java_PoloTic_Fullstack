@@ -205,5 +205,13 @@ public class Professor {
 		  this.aCourse = aCourse;
 	   }
     }
+    
+    @Override
+    public String toString() {
+	   String name = getName();
+	   Course aCourse = getaCourse();
+	   String message = "Name: " + name + "\nCourse: " + aCourse + "\n";
+	   return message;
+    }
 
 }

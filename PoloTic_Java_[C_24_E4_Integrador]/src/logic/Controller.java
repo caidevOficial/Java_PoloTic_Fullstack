@@ -17,8 +17,10 @@
 
 package logic;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedList;
+import java.util.Vector;
 
 import logic.entities.Course;
 import logic.entities.Professor;
@@ -28,20 +30,58 @@ import logic.entities.Professor;
  *
  */
 public class Controller {
-    static LinkedList<Course> allCourses = new LinkedList<Course>();
+    static Vector<Course> allCourses = new Vector<Course>();
     static LinkedList<Professor> allProfessors = new LinkedList<Professor>();
-    
+
+    public static Date ParseFecha(String fecha) {
+	   SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd");
+	   Date fechaDate = null;
+	   try {
+		  fechaDate = formato.parse(fecha);
+	   } catch (Exception e) {
+		  System.out.println(e);
+	   }
+	   return fechaDate;
+    }
+
     public static void addCourseLL(String id, String qtty, String name, boolean certif) {
 	   int idCourse = Integer.parseInt(id);
 	   int hours = Integer.parseInt(qtty);
-	   
+
 	   allCourses.add(new Course(idCourse, name, hours, certif));
     }
-    
-    public static void addProfessorLL(String dni, String name, String surname, Date birthdate, String speciality, Course aCourse) {
-	   allProfessors.add(new Professor(dni, name, surname, birthdate, speciality, aCourse));
+
+    /**
+     * @return the allCourses
+     */
+    public static Vector<Course> getAllCourses() {
+	   return allCourses;
     }
-    
+
+    /**
+     * @return the allProfessors
+     */
+    public static LinkedList<Professor> getAllProfessors() {
+	   return allProfessors;
+    }
+
+    public static boolean addProfessorLL(String dni, String name, String surname, String birthdate, String speciality, int aCourseindex) {
+
+	   try {
+		  System.out.println("Entro al try");
+		  Course thisCourse = allCourses.get(aCourseindex);
+		  System.out.println("Cargo el curso segun el indice pasado");
+		  allProfessors.add(new Professor(dni, name, surname, ParseFecha(birthdate), speciality, thisCourse));
+		  System.out.println("Cargo el profesor");
+		  return true;
+
+	   } catch (Exception e) {
+		  System.out.println("No se encontro el curso\n");
+		  System.out.println(e);
+	   }
+	   return false;
+    }
+
     public String PrintCourses() {
 	   String message = "";
 	   for (Course course : allCourses) {
@@ -49,5 +89,12 @@ public class Controller {
 	   }
 	   return message;
     }
-    
+
+    public String PrintProfessors() {
+	   String message = "";
+	   for (Professor profe : allProfessors) {
+		  message += profe.toString();
+	   }
+	   return message;
+    }
 }
