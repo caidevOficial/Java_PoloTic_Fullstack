@@ -30,9 +30,12 @@ import logic.entities.Professor;
  *
  */
 public class Controller {
+
+    // Attributes
     static Vector<Course> allCourses = new Vector<Course>();
     static LinkedList<Professor> allProfessors = new LinkedList<Professor>();
 
+    // Methods
     public static Date ParseFecha(String fecha) {
 	   SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd");
 	   Date fechaDate = null;
@@ -44,8 +47,23 @@ public class Controller {
 	   return fechaDate;
     }
 
-    public static void addCourseLL(String id, String qtty, String name, boolean certif) {
-	   int idCourse = Integer.parseInt(id);
+    private static int SearchNewID(Vector<Course> thisVector) {
+	   int nextID = 1;
+	   if (!thisVector.isEmpty()) {
+		  for (Course course : thisVector) {
+			 if (nextID == course.getCourse_id()) {
+				nextID++;
+			 } else if (nextID < course.getCourse_id()) {
+				nextID = course.getCourse_id();
+			 }
+		  }
+	   }
+
+	   return nextID;
+    }
+
+    public static void addCourseLL(String qtty, String name, boolean certif) {
+	   int idCourse = SearchNewID(allCourses);
 	   int hours = Integer.parseInt(qtty);
 
 	   allCourses.add(new Course(idCourse, name, hours, certif));
