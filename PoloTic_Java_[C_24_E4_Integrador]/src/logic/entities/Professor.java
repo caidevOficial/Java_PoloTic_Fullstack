@@ -33,21 +33,22 @@ public class Professor {
     Course aCourse;
 
     /**
-     * 
+     * Builds the entity empty.
      */
     public Professor() {
     }
 
     /**
-     * @param dni
+     * @param dni dni of the entity.
      */
     public Professor(String dni) {
 	   this.dni = dni;
     }
 
     /**
-     * @param dni
-     * @param name
+     * Builds the entity with 2 params.
+     * @param dni dni of the entity.
+     * @param name name of the entity.
      */
     public Professor(String dni, String name) {
 	   this.dni = dni;
@@ -55,9 +56,10 @@ public class Professor {
     }
 
     /**
-     * @param dni
-     * @param name
-     * @param surname
+     * Builds the entity with 3 params.
+     * @param dni dni of the entity.
+     * @param name name of the entity.
+     * @param surname surname of the entity.
      */
     public Professor(String dni, String name, String surname) {
 	   this.dni = dni;
@@ -66,10 +68,11 @@ public class Professor {
     }
 
     /**
-     * @param dni
-     * @param name
-     * @param surname
-     * @param birthDate
+     * Builds the entity with 4 params.
+     * @param dni dni of the entity.
+     * @param name name of the entity.
+     * @param surname surname of the entity.
+     * @param birthDate BirthDate of the entity.
      */
     public Professor(String dni, String name, String surname, Date birthDate) {
 	   this.dni = dni;
@@ -79,11 +82,12 @@ public class Professor {
     }
 
     /**
-     * @param dni
-     * @param name
-     * @param surname
-     * @param birthDate
-     * @param speciality
+     * Builds the entity with 5 params.
+     * @param dni dni of the entity.
+     * @param name name of the entity.
+     * @param surname surname of the entity.
+     * @param birthDate BirthDate of the entity.
+     * @param speciality Speciality BirthDate of the entity.
      */
     public Professor(String dni, String name, String surname, Date birthDate, String speciality) {
 	   this.dni = dni;
@@ -94,12 +98,13 @@ public class Professor {
     }
 
     /**
-     * @param dni
-     * @param name
-     * @param surname
-     * @param birthDate
-     * @param speciality
-     * @param aCourse
+     * Builds the entity with 6 params.
+     * @param dni dni of the entity.
+     * @param name name of the entity.
+     * @param surname surname of the entity.
+     * @param birthDate BirthDate of the entity.
+     * @param speciality Speciality BirthDate of the entity.
+     * @param aCourse Course of the entity.
      */
     public Professor(String dni, String name, String surname, Date birthDate, String speciality, Course aCourse) {
 	   this.dni = dni;

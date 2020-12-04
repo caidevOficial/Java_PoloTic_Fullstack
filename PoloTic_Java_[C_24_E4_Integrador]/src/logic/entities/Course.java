@@ -29,21 +29,23 @@ public class Course {
     boolean hasCertification;
 
     /**
-     * 
+     * Builds the entity empty.
      */
     public Course() {
     }
 
     /**
-     * @param course_id
+     * Builds the entity with 1 param.
+     * @param course_id Id of the entity.
      */
     public Course(int course_id) {
 	   this.course_id = course_id;
     }
 
     /**
-     * @param course_id
-     * @param course_name
+     * Builds the entity with 2 params.
+     * @param course_id Id of the entity.
+     * @param course_name name of the entity.
      */
     public Course(int course_id, String course_name) {
 	   this.course_id = course_id;
@@ -51,9 +53,10 @@ public class Course {
     }
 
     /**
-     * @param course_id
-     * @param course_name
-     * @param qttyHoursPerWeek
+     * Builds the entity with 3 params.
+     * @param course_id Id of the entity.
+     * @param course_name name of the entity.
+     * @param qttyHoursPerWeek hours of the entity.
      */
     public Course(int course_id, String course_name, int qttyHoursPerWeek) {
 	   this.course_id = course_id;
@@ -62,10 +65,11 @@ public class Course {
     }
 
     /**
-     * @param course_id
-     * @param course_name
-     * @param qttyHoursPerWeek
-     * @param hasCertification
+     * Builds the entity with 4 params.
+     * @param course_id Id of the entity.
+     * @param course_name name of the entity.
+     * @param qttyHoursPerWeek hours of the entity.
+     * @param hasCertification boolean to know if the entity has certification or not.
      */
     public Course(int course_id, String course_name, int qttyHoursPerWeek, boolean hasCertification) {
 	   this.course_id = course_id;

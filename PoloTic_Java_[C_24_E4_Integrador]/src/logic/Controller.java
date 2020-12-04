@@ -27,7 +27,6 @@ import logic.entities.Professor;
 
 /**
  * @author FacuFalcone - CaidevOficial
- *
  */
 public class Controller {
 
@@ -36,6 +35,12 @@ public class Controller {
     static LinkedList<Professor> allProfessors = new LinkedList<Professor>();
 
     // Methods
+    
+    /**
+     * Pases the string into a valid Date.
+     * @param fecha string to be parse.
+     * @return the string parsed into a date.
+     */
     public static Date ParseFecha(String fecha) {
 	   SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd");
 	   Date fechaDate = null;
@@ -47,6 +52,11 @@ public class Controller {
 	   return fechaDate;
     }
 
+    /**
+     * Obtains a new id.
+     * @param thisVector Vector for search the id.
+     * @return the id to use.
+     */
     private static int SearchNewID(Vector<Course> thisVector) {
 	   int nextID = 1;
 	   if (!thisVector.isEmpty()) {
@@ -62,6 +72,12 @@ public class Controller {
 	   return nextID;
     }
 
+    /**
+     * Adds a course into the Vector.
+     * @param qtty quantity of hours of the course.
+     * @param name name of the course.
+     * @param certif bollean if has certification or not.
+     */
     public static void addCourseLL(String qtty, String name, boolean certif) {
 	   int idCourse = SearchNewID(allCourses);
 	   int hours = Integer.parseInt(qtty);
@@ -83,6 +99,16 @@ public class Controller {
 	   return allProfessors;
     }
 
+    /**
+     * Adds a professor into the LL.
+     * @param dni dni of the professor.
+     * @param name name of the professor.
+     * @param surname surname of the professor.
+     * @param birthdate birthdate of the professor.
+     * @param speciality speciality of the professor.
+     * @param aCourseindex course assigned of the professor.
+     * @return true if ok.
+     */
     public static boolean addProfessorLL(String dni, String name, String surname, String birthdate, String speciality, int aCourseindex) {
 
 	   try {
@@ -100,6 +126,10 @@ public class Controller {
 	   return false;
     }
 
+    /**
+     * Returns the info of all courses in the Vector.
+     * @return info of the courses.
+     */
     public String PrintCourses() {
 	   String message = "";
 	   for (Course course : allCourses) {
@@ -108,6 +138,10 @@ public class Controller {
 	   return message;
     }
 
+    /**
+     * Returns the info of all professors in the LL.
+     * @return info of all professors.
+     */
     public String PrintProfessors() {
 	   String message = "";
 	   for (Professor profe : allProfessors) {
