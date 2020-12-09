@@ -16,10 +16,47 @@
  */
 package logic;
 
+import java.util.Date;
+import java.util.List;
+import logic.classes.Student;
+import persistence.PersistenceController;
+
 /**
- *
  * @author FacuFalcone - CaidevOficial
  */
 public class Main {
+    
+    public static void main(String[] args){
+        // instance the PC
+        PersistenceController PC = new PersistenceController();
 
+        // create entity
+        //Student stud1 = new Student("55444222", "Facu", "Kun", new Date("02/25/1990"));
+        //Student stud2 = new Student("35055008", "Fiore", "Rubbo", new Date("02/24/1990"));
+        
+        // Create the entity into the db
+        //PC.createStudent(stud1);
+        //PC.createStudent(stud2);
+        
+        // Edit values of the entity and modify them in the db.
+        //stud1.setName("Facu");
+        //stud1.setSurname("Falcone");
+        //stud1.setDni("11222333");
+        //PC.modifyStudent(stud1);
+        
+        // Delete from the db the entity
+        //PC.deleteStudent("35055008");
+
+        // Shows all the entities from the db
+        List<Student> allStudents = PC.showStudents();
+        System.out.println("\nLista de estudiantes:");
+        System.out.println("   DNI     APELLIDO   NOMBRE");
+        for (Student allStudent : allStudents) {
+            System.out.printf("%10s %-10s %-10s\n",allStudent.getDni(),allStudent.getSurname(), allStudent.getName());
+        }
+        
+        // Shows an specific entity from the db
+        Student myStud = PC.showSpecificEntity("35055007");
+        System.out.printf("%10s %-10s %-10s\n",myStud.getDni(),myStud.getSurname(), myStud.getName());
+    }
 }

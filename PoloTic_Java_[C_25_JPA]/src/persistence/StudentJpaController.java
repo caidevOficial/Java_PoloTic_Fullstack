@@ -16,7 +16,7 @@
  */
 package persistence;
 
-import java.io.Serializable;
+//import java.io.Serializable;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -33,7 +33,7 @@ import persistence.exceptions.PreexistingEntityException;
  *
  * @author FacuFalcone - CaidevOficial
  */
-public class StudentJpaController implements Serializable {
+public class StudentJpaController{
 
     private EntityManagerFactory emf = null;
     
@@ -42,7 +42,7 @@ public class StudentJpaController implements Serializable {
     }
     
     public StudentJpaController() {
-        emf = Persistence.createEntityManagerFactory("PoloTic_Java__C_25_JPA_PU");
+        emf = Persistence.createEntityManagerFactory("PoloTic_Java_C_25_JPA_PU");
     }
     
     public EntityManager getEntityManager() {
@@ -157,5 +157,4 @@ public class StudentJpaController implements Serializable {
             em.close();
         }
     }
-    
 }

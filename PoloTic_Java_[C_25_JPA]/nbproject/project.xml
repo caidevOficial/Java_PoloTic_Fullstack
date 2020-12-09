@@ -5,7 +5,7 @@
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
             <name>PoloTic_Java_[C_25_JPA]</name>
             <source-roots>
-                <root id="src.dir"/>
+                <root id="src.PoloTic_Java_%5BC_25_JPA%5D.dir"/>
             </source-roots>
             <test-roots>
                 <root id="test.src.dir"/>
