@@ -32,11 +32,11 @@ public class Main {
 
         // create entity
         //Student stud1 = new Student("55444222", "Facu", "Kun", new Date("02/25/1990"));
-        //Student stud2 = new Student("35055008", "Fiore", "Rubbo", new Date("02/24/1990"));
+        Student stud2 = new Student("22333444", "Agostina", "Viso", new Date("04/08/1994"));
         
         // Create the entity into the db
         //PC.createStudent(stud1);
-        //PC.createStudent(stud2);
+        PC.createStudent(stud2);
         
         // Edit values of the entity and modify them in the db.
         //stud1.setName("Facu");
