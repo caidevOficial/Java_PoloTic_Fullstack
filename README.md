@@ -19,6 +19,7 @@ private static String StartCourse(){
 |--------|----------|
 |<img align="center" alt="MySQL" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/mysql_logo.svg" width="50px" height="50px" />|<a href="https://www.mysql.com/">MySQL</a>|<!-- MySQL -->
 |<img align="center" alt="HTML5" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/_html5.png" width="50px" height="50px" />|<a href="https://www.w3schools.com/html/">HTML5</a>|<!-- HTML5 -->
+|<img align="center" alt="CSS3" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/css3.png" width="50px" height="50px" />|<a href="https://www.w3schools.com/css/">CSS3</a>|<!-- CSS3 -->
     
 ## License 📄
 This project is under license [GNU GENERAL PUBLIC LICENSE v3.0] - read the file [LICENSE.md](LICENSE) for details.
