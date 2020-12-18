@@ -11,17 +11,9 @@
     </head>
     <body>
         <h1>Probando JSP!</h1>
-        <%-- 
-        <h2>GET</h2>
-        <form action="confirmacion.jsp" method="GET">
-            Nombre: <input type="text" name="nombreInput">
-            Edad: <input type="text" name="edad">
-            <input type="submit" value="enviar">
-        </form>
-        --%>
         <h2>POST:</h2>
-        <form action="ServletPrueba" method="POST">
-            Nombre: <input type="text" name="nombre">
+        <form action="New" method="POST">
+            Nombre: <input type="text" name="nombre"></br>
             Edad: <input type="text" name="edad">
             <input type="submit" value="Enviar">
         </form>

@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="PoloTic_Java_[C_30]" default="default" basedir=".">
-    <description>Builds, tests, and runs the project PoloTic_Java_[C_30].</description>
+<project name="clase30" default="default" basedir=".">
+    <description>Builds, tests, and runs the project clase30.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 

@@ -12,7 +12,7 @@
     <body>
         <h1>Hiciste el primer llamado entre dos paginas JSP.</h1>
         <h1>Datos ingresados:</h1>
-        <p>Nombre: </p> <%=session.getAttribute("nombre")%>
-        <p>Edad: </p> <%=session.getAttribute("edad")%>
+        <p>Nombre: <%=session.getAttribute("nombre")%> </p>
+        <p>Edad: <%=session.getAttribute("edad")%></p> 
     </body>
 </html>
