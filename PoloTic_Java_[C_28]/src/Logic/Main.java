@@ -21,22 +21,22 @@ public class Main {
         LogicController LC = new LogicController();
         
         User user1 = new User();
-        user1.setUserName("cai");
+        user1.setUserName("Facundo");
         user1.setPassword("1234");
         User user2 = new User();
-        user2.setUserName("cai2");
+        user2.setUserName("Caidev");
         user2.setPassword("1234");
         
         Employee emp1 = new Employee();
         emp1.setDni("11222444");
-        emp1.setName("Lagertha");
-        emp1.setCharge("Gerente");
+        emp1.setName("FacuFalcone");
+        emp1.setCharge("Supervisor");
         emp1.setUser(user1);
         
         Employee emp2 = new Employee();
         emp2.setDni("11222443");
-        emp2.setName("Ragnar");
-        emp2.setCharge("Apoderado");
+        emp2.setName("CaidevSama");
+        emp2.setCharge("Empleado");
         emp2.setUser(user2);
         
         LC.createFullEmployee(user1, emp1);
@@ -47,7 +47,7 @@ public class Main {
         allEmployees.add(emp2);
                 
         Juego game1 = new Juego();
-        game1.setName("Montaña Rusa");
+        game1.setName("Tren Fantasma");
         game1.setCapacity(10);
         game1.setMin_age(10);
         game1.setAllAmployees(allEmployees);
