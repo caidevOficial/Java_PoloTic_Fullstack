@@ -64,7 +64,7 @@ public class DeleteUser extends HttpServlet {
             response.sendRedirect("noExistUser.jsp");
         }else{
             if(LC.deleteUser(id_user)){
-                response.sendRedirect("successUser.jsp");
+                response.sendRedirect("Success/successUser.jsp");
             }           
         }
     }

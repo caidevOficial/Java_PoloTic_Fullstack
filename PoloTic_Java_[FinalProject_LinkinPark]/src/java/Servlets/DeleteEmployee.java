@@ -68,7 +68,7 @@ public class DeleteEmployee extends HttpServlet {
             Employee thisEmployee = LC.getEmployeeByID(id_employee);
             LC.deleteEmployee(thisEmployee.getId_employee(), thisEmployee.getEmployeeUser().getId_user());
             
-            response.sendRedirect("successEmployee.jsp");
+            response.sendRedirect("Success/successEmployee.jsp");
                     
         }
     }

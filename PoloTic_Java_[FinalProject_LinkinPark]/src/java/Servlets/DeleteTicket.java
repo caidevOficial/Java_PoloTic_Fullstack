@@ -64,9 +64,9 @@ public class DeleteTicket extends HttpServlet {
             response.sendRedirect("noExistTicket.jsp");
         }else{
             if(LC.deleteTicket(id_Ticket)){
-                response.sendRedirect("successTicket.jsp");
+                response.sendRedirect("Success/successTicket.jsp");
             }else{
-                response.sendRedirect("errorTicket.jsp");
+                response.sendRedirect("Error/errorTicket.jsp");
             }           
         }
     }

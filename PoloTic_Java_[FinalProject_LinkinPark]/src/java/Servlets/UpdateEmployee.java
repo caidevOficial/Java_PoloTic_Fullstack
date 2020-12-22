@@ -69,14 +69,14 @@ public class UpdateEmployee extends HttpServlet {
         
         //thisSession.setAttribute("control", LC);
         if(!existEmployee){
-            response.sendRedirect("errorEmployee.jsp");
+            response.sendRedirect("Error/errorEmployee.jsp");
         }else{
             newEmployee = LC.getEmployeeByID(id_employee);
             newEmployee.setName(name);
             newEmployee.setSurname(surname);
             LC.editEmployee(newEmployee);
             
-            response.sendRedirect("successEmployee.jsp");
+            response.sendRedirect("Success/successEmployee.jsp");
         }
     }
 

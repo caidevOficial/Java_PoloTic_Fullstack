@@ -71,9 +71,9 @@ public class UpdateTicket extends HttpServlet {
             thisTicket.setTime(LC.deStringToDate(time));
             
             if(LC.editTicket(thisTicket)){
-                response.sendRedirect("successTicket.jsp");
+                response.sendRedirect("Success/successTicket.jsp");
             }else{
-                response.sendRedirect("errorTicket.jsp");
+                response.sendRedirect("Error/errorTicket.jsp");
             }
         }else{
             response.sendRedirect("noExistTicket.jsp");

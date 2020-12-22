@@ -72,9 +72,9 @@ public class AddEmployee extends HttpServlet {
             newEmployee.setEmployeeUser(LC.getUserByID(user_ID));
             
             if(LC.createEmployee(newEmployee)){
-                response.sendRedirect("successEmployee.jsp");
+                response.sendRedirect("Success/successEmployee.jsp");
             }else{
-                response.sendRedirect("errorEmployee.jsp");
+                response.sendRedirect("Error/errorEmployee.jsp");
             }
         } else {
             response.sendRedirect("noExistUser.jsp");

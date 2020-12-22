@@ -64,9 +64,9 @@ public class DeleteGame extends HttpServlet {
             response.sendRedirect("noExistGame.jsp");
         }else{
             if(LC.deleteSchedule(LC.getGameByID(id_Game).getGameTime().getId_schedule()) && LC.deleteGame(id_Game)){
-                response.sendRedirect("successGame.jsp");
+                response.sendRedirect("Success/successGame.jsp");
             }else{
-                response.sendRedirect("errorGame.jsp");
+                response.sendRedirect("Error/errorGame.jsp");
             }           
         }
     }

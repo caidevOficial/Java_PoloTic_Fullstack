@@ -70,7 +70,7 @@ public class AddUser extends HttpServlet {
             newUser.setPassword(password);
             
             if(LC.createUser(newUser)){
-                response.sendRedirect("successUser.jsp");
+                response.sendRedirect("Success/successUser.jsp");
             }else{
                 response.sendRedirect("existUser.jsp");
             }

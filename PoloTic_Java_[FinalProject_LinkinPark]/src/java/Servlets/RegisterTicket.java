@@ -20,7 +20,6 @@ import Logic.Controller.LogicController;
 import Logic.Entities.Customer;
 import Logic.Entities.Ticket;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -81,9 +80,9 @@ public class RegisterTicket extends HttpServlet {
             newTicket.setTime(time);
             
             if(LC.createTicket(newTicket)){
-                response.sendRedirect("successTicket.jsp");
+                response.sendRedirect("Success/successTicket.jsp");
             }else{
-                response.sendRedirect("errorTicket.jsp");
+                response.sendRedirect("Error/errorTicket.jsp");
             }
         }
     }

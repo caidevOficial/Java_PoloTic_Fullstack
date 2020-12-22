@@ -70,7 +70,7 @@ public class UpdateUser extends HttpServlet {
             newUser.setPassword(password);
             LC.editUser(newUser);
             
-            response.sendRedirect("successUser.jsp");
+            response.sendRedirect("Success/successUser.jsp");
         }
     }
 

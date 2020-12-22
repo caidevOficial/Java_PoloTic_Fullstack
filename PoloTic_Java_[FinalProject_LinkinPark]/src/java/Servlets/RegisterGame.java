@@ -75,13 +75,13 @@ public class RegisterGame extends HttpServlet {
             try {
                 thisTime.setTimeFrom(LogicController.convertirHoraStringADate(fromHour, fromMinutes));
             } catch (ParseException ex) {
-                response.sendRedirect("errorGame.jsp");
+                response.sendRedirect("Error/errorGame.jsp");
                 Logger.getLogger(RegisterGame.class.getName()).log(Level.SEVERE, null, ex);
             }
             try {
                 thisTime.setTimeTo(LogicController.convertirHoraStringADate(toHours, toMinutes));
             } catch (ParseException ex) {
-                response.sendRedirect("errorGame.jsp");
+                response.sendRedirect("Error/errorGame.jsp");
                 Logger.getLogger(RegisterGame.class.getName()).log(Level.SEVERE, null, ex);
             }
 
@@ -90,13 +90,13 @@ public class RegisterGame extends HttpServlet {
             thisGame.setEmployeeOfGame(LC.getEmployeeByID(id_employee));
 
             if (LC.createGame(thisGame)) {
-                response.sendRedirect("successGame.jsp");
+                response.sendRedirect("Success/successGame.jsp");
                 System.out.println("Despues del success");
             } else {
-                response.sendRedirect("errorGame.jsp");
+                response.sendRedirect("Error/errorGame.jsp");
             }
         } else {
-            response.sendRedirect("errorGame.jsp");
+            response.sendRedirect("Error/errorGame.jsp");
         }
 
     }
