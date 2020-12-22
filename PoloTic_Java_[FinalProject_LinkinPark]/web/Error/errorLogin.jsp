@@ -15,13 +15,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes"> 
 	    
-	<link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+	<link href="../resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="../resources/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
 	
-	<link href="resources/css/font-awesome.css" rel="stylesheet">
+	<link href="../resources/css/font-awesome.css" rel="stylesheet">
 	    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
 	    
-	<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../resources/css/style.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -35,7 +35,7 @@
 				<span class="icon-bar"></span>
 			</a>
 			
-			<a class="brand" href="index.html">
+			<a class="brand" href="../index.html">
 				Error Area - [Linkin Park]				
 			</a>		
 			
@@ -43,7 +43,7 @@
 				<ul class="nav pull-right">
 					
 					<li class="">						
-						<a href="index.jsp" class="">
+						<a href="../index.jsp" class="">
 							<i class="icon-chevron-left"></i>
 							Back to Home
 						</a>
@@ -61,11 +61,11 @@
 				<h1>404 - 1</h1>			
 				<h2>Buddy, Your credentials are wrong!.</h2>			
 				<div class="error-details">
-					Why not try going back to the <a href="login.jsp">LOGIN page</a> or perhaps try go to the index (if you can :v )!				
+					Why not try going back to the <a href="../login.jsp">LOGIN page</a> or perhaps try go to the index (if you can :v )!				
 				</div> <!-- /error-details -->
 			
 				<div class="error-actions">
-					<a href="index.jsp" class="btn btn-large btn-primary">
+					<a href="../index.jsp" class="btn btn-large btn-primary">
 						<i class="icon-chevron-left"></i>
 						&nbsp;
 						Back to Index						
@@ -76,7 +76,7 @@
 	</div> <!-- /row -->
 </div> <!-- /container -->
 
-<script src="js/jquery-1.7.2.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="../resources/js/jquery-1.7.2.min.js"></script>
+<script src="../resources/js/bootstrap.js"></script>
 </body>
 </html>

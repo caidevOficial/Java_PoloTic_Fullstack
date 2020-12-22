@@ -15,12 +15,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes"> 
 
-        <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+        <link href="../resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../resources/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
 
-        <link href="resources/css/font-awesome.css" rel="stylesheet">
+        <link href="../resources/css/font-awesome.css" rel="stylesheet">
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">    
-        <link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="../resources/css/style.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>	
@@ -43,14 +43,14 @@
                         <span class="icon-bar"></span>
                     </a>
 
-                    <a class="brand" href="index.html">
+                    <a class="brand" href="../index.html">
                         Success Area - [Linkin Park]				
                     </a>		
 
                     <div class="nav-collapse">
                         <ul class="nav pull-right">			
                             <li class="">						
-                                <a href="index.jsp" class="">
+                                <a href="../index.jsp" class="">
                                     <i class="icon-chevron-left"></i>
                                     Back to Home
                                 </a>					
@@ -70,12 +70,12 @@
                         <h2>User: Action successfully!.</h2>
 
                         <div class="error-details">
-                            Now you can go to the <a href="login.jsp">LOGIN page</a> or perhaps try go to the <a href="index.jsp">INDEX page</a>
+                            Now you can go to the <a href="../login.jsp">LOGIN page</a> or perhaps try go to the <a href="../index.jsp">INDEX page</a>
 
                         </div> <!-- /error-details -->
 
                         <div class="error-actions">
-                            <a href="management.jsp" class="btn btn-large btn-primary">
+                            <a href="../management.jsp" class="btn btn-large btn-primary">
                                 <i class="icon-chevron-left"></i>
                                 &nbsp;
                                 Back to Management Area						
@@ -86,8 +86,8 @@
             </div> <!-- /row -->	
         </div> <!-- /container -->
 
-        <script src="js/jquery-1.7.2.min.js"></script>
-        <script src="js/bootstrap.js"></script>
+        <script src="../resources/js/jquery-1.7.2.min.js"></script>
+        <script src="../resources/js/bootstrap.js"></script>
 <%
 //    }
 %>
