@@ -36,13 +36,13 @@ public class Ticket implements Serializable {
     // Attributes
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    int id_ticket;
+    private int id_ticket;
     @Temporal(TemporalType.DATE)
-    Date time;
+    private Date time;
     @OneToOne
-    Game gameAssigned;
+    private Game gameAssigned;
     @OneToOne(cascade = CascadeType.ALL)
-    Customer customerOwner;
+    private Customer customerOwner;
 
     /**
      * Reserves space in memory to build the entity.

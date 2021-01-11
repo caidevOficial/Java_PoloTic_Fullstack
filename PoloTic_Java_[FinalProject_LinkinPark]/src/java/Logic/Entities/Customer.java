@@ -31,7 +31,7 @@ public class Customer extends Person implements Serializable {
     // Attributes
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    int id_customer;
+    private int id_customer;
 
     /**
      * Reserves space in memory to build the entity.

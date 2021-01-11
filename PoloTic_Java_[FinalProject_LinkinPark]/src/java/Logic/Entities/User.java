@@ -32,10 +32,10 @@ public class User implements Serializable {
     // Attributes
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    int id_user;
+    private int id_user;
     @Basic
-    String username;
-    String password;
+    private String username;
+    private String password;
 
     /**
      * Reserves space in memory to build the entity.

@@ -34,14 +34,14 @@ public class Game implements Serializable {
     // Attributes
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    int id_game;
+    private int id_game;
     @Basic
-    String name;
+    private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
-    Schedule gameTime;
+    private Schedule gameTime;
     @OneToOne
-    Employee employeeOfGame;
+    private Employee employeeOfGame;
 
     /**
      * Reserves space in memory to build the entity.

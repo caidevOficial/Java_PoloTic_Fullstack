@@ -36,11 +36,11 @@ public class Schedule implements Serializable {
     // Atributes
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    int id_schedule;
+    private int id_schedule;
     @Temporal(TemporalType.TIME)
-    Date timeFrom;
+    private Date timeFrom;
     @Temporal(TemporalType.TIME)
-    Date timeTo;
+    private Date timeTo;
 
     /**
      * Reserves space in memory to build the entity.
