@@ -1,4 +1,20 @@
-<td><a href="https://polotic.misiones.gob.ar/" target="_blank"><img alt="PoloTic Misiones" src="https://github.com/caidevOficial/Logos/blob/master/Instituciones/polo_logo_2020.png" width="330px" height="112px" /></td></br>
+<table>
+  <tr>
+    <td>
+      <a href="https://polotic.misiones.gob.ar/" target="_blank"><img alt="PoloTic Misiones" src="https://github.com/caidevOficial/Logos/blob/master/Instituciones/polo_logo_2020.png" width="330px" height="112px" />
+      </td>
+      <td>
+        <img alt="Java" src="https://github.com/caidevOficial/Logos/raw/master/Lenguajes/java.png" height="112px" />
+      </td>
+        <td>
+          <img alt="MariaDB" src="https://camo.githubusercontent.com/c801bc4030f308500f29b695f0771ba313b3b2088c91d06152b5cc5a050e3127/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6d6172696164622f6d6172696164622d69636f6e2e737667" height="112px" />
+      </td>
+    <td>
+      <img alt="MySQL" src="https://github.com/caidevOficial/Curriculum/raw/main/media/icons/mysql/mysql-original-wordmark.svg?raw=true" height="112px" />
+      </td>
+  </tr>
+  </table>
+  </br>
 
 ## Java Full-Stack Web Development - PoloTic Misiones.
 <a href="https://github.com/caidevOficial/tp_laboratorio_1">
