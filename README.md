@@ -1,3 +1,10 @@
+
+![](https://hit.yhype.me/github/profile?user_id=12877139)
+
+<p align="center">
+    <img src="https://komarev.com/ghpvc/?username=caidevoficial&label=Profile%20views&color=0e75b6&style=plastic" alt="caidevoficial" />
+</p>
+
 <table>
   <tr>
     <td>
@@ -10,7 +17,7 @@
           <img alt="MariaDB" src="https://camo.githubusercontent.com/c801bc4030f308500f29b695f0771ba313b3b2088c91d06152b5cc5a050e3127/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6d6172696164622f6d6172696164622d69636f6e2e737667" height="112px" />
       </td>
     <td>
-      <img alt="MySQL" src="https://github.com/caidevOficial/Curriculum/raw/main/media/icons/mysql/mysql-original-wordmark.svg?raw=true" height="112px" />
+      <img alt="MySQL" src="https://github.com/caidevOficial/Resume/raw/main/media/icons/mysql/mysql-original-wordmark.svg?raw=true" height="112px" />
       </td>
   </tr>
   </table>
@@ -35,7 +42,7 @@ private static String StartCourse(){
 |--------|----------|--------|----------|
 |<img align="center" alt="Java 8" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/java.png" width="50px" height="50px" />|<a href="https://www.oracle.com/technetwork/es/java/javase/downloads/index.html/">Java</a>|<!-- Java --><img align="center" alt="HTML5" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/_html5.png" width="50px" height="50px" />|<a href="https://www.w3schools.com/html/">HTML5</a>|<!-- HTML5 -->
 |<img align="center" alt="MySQL" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/mysql_logo.svg" width="50px" height="50px" />|<a href="https://www.mysql.com/">MySQL</a>|<!-- MySQL --><img align="center" alt="CSS3" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/css3.png" width="50px" height="50px" />|<a href="https://www.w3schools.com/css/">CSS3</a>|<!-- CSS3 -->
-|||<img align="center" alt="Javascript" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/logo-js.png" width="50px" height="50px" />|<a href="https://www.w3schools.com/js/">Javascript</a>|<!-- Javascript -->
+|||<img align="center" alt="Javascript" src="https://github.com/caidevOficial/Logos/blob/master/Lenguajes/logo-js.png?raw=true" width="50px" height="50px" />|<a href="https://www.w3schools.com/js/">Javascript</a>|<!-- Javascript -->
 
     
 ## License 📄
